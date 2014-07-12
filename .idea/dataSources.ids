@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="myFridge DB" product="MySQL" version="5.6.12-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="953c57b3-c4e0-450b-a6ee-a9cb949bba03">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost/myFridge</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfc7dfcbdfd9dfdedfcfdfd8dfc0</user-password>
+    <schema-pattern>myfridge.*</schema-pattern>
+    <default-schemas>myfridge.*</default-schemas>
+    <libraries>
+      <library>
+        <url>file://$PROJECT_DIR$/../mysqlDriver/mysql-connector-java-5.1.26-bin.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="myfridge" />
+    <table name="age" schema="" catalog="myfridge" type="TABLE">
+      <column name="AgeGroup" sqlType="VARCHAR" length="10" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="AgeGroup" />
+      <exported-key name="AgeGroup" table="user" schema="" catalog="myfridge" columns="AgeGroup" />
+    </table>
+    <table name="content" schema="" catalog="myfridge" type="TABLE">
+      <column name="ContentID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="Description" sqlType="VARCHAR" length="90" precision="0" nullable="false" jdbcType="12" />
+      <column name="Amount" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="Quantity" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ==" />
+      <column name="DrawerID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="TimeCreated" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" />
+      <column name="TimeModified" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="ContentID" />
+      <foreign-key name="drawerid" columns="DrawerID" ref-table="drawer" ref-schema="" ref-catalog="myfridge" ref-columns="DrawerID" update-rule="3" delete-rule="3" deferrability="2" />
+      <index name="ContentID_UNIQUE" unique="true" columns="ContentID" />
+      <index name="drawerid_idx" unique="false" columns="DrawerID" />
+    </table>
+    <table name="country" schema="" catalog="myfridge" type="TABLE">
+      <column name="Country" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="Country" />
+      <exported-key name="Country" table="user" schema="" catalog="myfridge" columns="Country" />
+    </table>
+    <table name="drawer" schema="" catalog="myfridge" type="TABLE">
+      <column name="DrawerID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="Name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="Description" sqlType="VARCHAR" length="90" precision="0" nullable="true" jdbcType="12" />
+      <column name="OrderPriority" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="FreezerID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="TimeCreated" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" />
+      <primary-key name="PRIMARY" columns="DrawerID" />
+      <foreign-key name="freezerid" columns="FreezerID" ref-table="freezer" ref-schema="" ref-catalog="myfridge" ref-columns="FreezerID" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="drawerid" table="content" schema="" catalog="myfridge" columns="DrawerID" />
+      <index name="DrawerID_UNIQUE" unique="true" columns="DrawerID" />
+      <index name="OrderPriority_UNIQUE" unique="true" columns="OrderPriority" />
+      <index name="freezerid_idx" unique="false" columns="FreezerID" />
+    </table>
+    <table name="freezer" schema="" catalog="myfridge" type="TABLE">
+      <column name="FreezerID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="Name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="Description" sqlType="VARCHAR" length="90" precision="0" nullable="true" jdbcType="12" />
+      <column name="Location" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="Make" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="TimeCreated" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" />
+      <column name="UserID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="FreezerID" />
+      <foreign-key name="userid" columns="UserID" ref-table="user" ref-schema="" ref-catalog="myfridge" ref-columns="UserID" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="freezerid" table="drawer" schema="" catalog="myfridge" columns="FreezerID" />
+      <index name="FreezerID_UNIQUE" unique="true" columns="FreezerID" />
+      <index name="userid_idx" unique="false" columns="UserID" />
+    </table>
+    <table name="gender" schema="" catalog="myfridge" type="TABLE">
+      <column name="GenderType" sqlType="VARCHAR" length="15" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="GenderType" />
+      <exported-key name="Gender" table="user" schema="" catalog="myfridge" columns="Gender" />
+    </table>
+    <table name="user" schema="" catalog="myfridge" type="TABLE">
+      <column name="UserID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="Email" sqlType="VARCHAR" length="80" precision="0" nullable="false" jdbcType="12" />
+      <column name="Username" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="Password" sqlType="VARCHAR" length="60" precision="0" nullable="false" jdbcType="12" />
+      <column name="FirstName" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="LastName" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="Gender" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="AgeGroup" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="Country" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="Avatar" sqlType="LONGBLOB" length="2147483647" precision="0" nullable="true" jdbcType="-4" />
+      <column name="Activation" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="TimeCreated" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" />
+      <primary-key name="PRIMARY" columns="UserID" />
+      <foreign-key name="AgeGroup" columns="AgeGroup" ref-table="age" ref-schema="" ref-catalog="myfridge" ref-columns="AgeGroup" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="Country" columns="Country" ref-table="country" ref-schema="" ref-catalog="myfridge" ref-columns="Country" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="Gender" columns="Gender" ref-table="gender" ref-schema="" ref-catalog="myfridge" ref-columns="GenderType" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="userid" table="freezer" schema="" catalog="myfridge" columns="UserID" />
+      <index name="Email_UNIQUE" unique="true" columns="Email" />
+      <index name="UserID_UNIQUE" unique="true" columns="UserID" />
+      <index name="Username_UNIQUE" unique="true" columns="Username" />
+      <index name="Age_idx" unique="false" columns="AgeGroup" />
+      <index name="Country_idx" unique="false" columns="Country" />
+      <index name="Gender_idx" unique="false" columns="Gender" />
+    </table>
+  </data-source>
+</component>

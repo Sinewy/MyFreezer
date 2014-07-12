@@ -1,0 +1,127 @@
+.registrationForm {
+	display: block;
+}
+
+.registrationFormHidden {
+	display: none;
+}
+
+.activationInfo {
+	display: block;
+}
+
+.activationInfoHidden {
+	display: none;
+}
+
+body {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+
+.success {
+    border: 1px solid;
+    margin: 0 auto;
+    padding:10px 5px 10px 60px;
+    width:450px;
+    color: #4F8A10;
+    background: #DFF2BF;
+}
+
+.errormsgbox {
+    border: 1px solid;
+    margin: 0 auto;
+    padding:10px 5px 10px 60px;
+    width:450px;
+    color: #D8000C;
+}
+
+.infoBox {
+    background: #aec4de;
+    border: 1px solid #000000;
+    margin: 15px;
+}
+
+.addNewFreezerBtn {
+    background: #DFF2BF;
+    border: 1px solid #000000;
+}
+
+.freezerBox {
+    width: 250px;
+    /*background: #e0e0e0;*/
+    /*border: 1px solid #000000;*/
+    /*border-radius: 10px;*/
+    margin: 15px;
+    padding: 5px;
+    float: left;
+}
+
+.fakeForm {
+    float: right;
+}
+
+.freezerData {
+    clear: both;
+    background: #e0e0e0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+}
+
+.modifyBox {
+    float: right;
+}
+
+.message {
+    background: #dc8b92;
+    border: 1px solid #8D0D19;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.testCssClass {
+    background: #CCC;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    /*float: left;*/
+}
+
+table {
+    width: 400px;
+    border: 1px solid black;
+    background: #e0e0e0;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#hyperlink-style-button{*/
+    /*background:none;*/
+    /*border:0;*/
+    /*color:#666;*/
+    /*text-decoration:underline;*/
+/*}*/
+
+/*#hyperlink-style-button:hover{*/
+    /*background:none;*/
+    /*border:0;*/
+    /*color:#666;*/
+    /*text-decoration:none;*/
+    /*cursor:pointer;*/
+    /*cursor:hand;*/
+/*}*/
