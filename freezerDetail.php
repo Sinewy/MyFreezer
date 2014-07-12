@@ -50,9 +50,9 @@ if(isset($_POST["submitted"])) {
 	<div>
 		<pre>
 			<?php
-//				print_r($_GET);
+				print_r($_GET);
 				print_r($_SESSION);
-//				print_r($_POST);
+				print_r($_POST);
 			?>
 		</pre>
 	</div>
