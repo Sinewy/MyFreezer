@@ -21,18 +21,6 @@ if(isset($_GET["fid"])) {
 
 }
 
-if(isset($_POST["submitted"])) {
-
-
-} else if(isset($_POST["btnPressed"])) {
-	//
-} else {
-//	$freezerName = "";
-//	$freezerDescription = "";
-//	$freezerLocation = "";
-//	$freezerMake = "";
-}
-
 ?>
 
 <?php include("includes/header.php"); ?>
@@ -67,21 +55,13 @@ if(isset($_POST["submitted"])) {
 				<div id="drawerContent">
 					<p>Content</p>
 					<p>Name/Description | Amount | Quantity | Date</p>
-<!--					<div class="contentRow0">-->
-<!--						<input type="text" id="contentDescription1" name="contentDescription1" size="60" placeholder="enter content: stakes" />-->
-<!--						<input type="text" id="contentAmount1" name="contentAmount1" size="30" placeholder="enter amount: 2 pieces" />-->
-<!--						<input type="number" id="contentQuantity1" name="contentQuantity1" min="1" max="20" placeholder="enter quantity: 4" />-->
-<!--						<input type="date" id="contentDate1" name="contentDate1" placeholder="mm/dd/YYYY" />-->
-<!--						<button type="button" name="delete">Delete</button>-->
-<!--						<input class="deleteCurrentRowBtn" type="button" name="delete" value="Delete" />-->
-<!--					</div>-->
 				</div>
 				<div class="addNewContentLine">
-<!--					<button type="button" name="addNewContent" onclick="addNewContentRow();">+</button><span>Add new Content line</span>-->
 					<input type="button" id="addNewContentBtn" name="addNewContent2" value="+" /><span>Add new Content line</span>
 				</div>
 				<div class="submitOrCancel">
-					<button type="submit" name="submutDrawerData">Save</button>
+					<!--					<button type="submit" name="submutDrawerData">Save</button>-->
+					<input type="button" id="saveDrawerData" name="saveDrawerData" value="Save" />
 					<button id="cancelDrawerDataBtn" type="button" name="cancelAndClose">Cancel</button>
 				</div>
 			</fieldset>

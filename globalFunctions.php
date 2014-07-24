@@ -256,13 +256,13 @@ function createFreezerDrawerView($freezerId) {
 	$output = "<div class=\"drawers\">";
 	if(mysqli_num_rows($drawerData) > 0) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
-			$output .= "<div class=\"drawer\">";
+			$output .= "<div class=\"drawer\" id=\"drawer" . $drawer["DrawerID"] . "\">";
 			$output .= $drawer["Name"] . "  ";
 			$output .= $drawer["Description"] . "  ";
 //			$output .= addEditDeleteButtons("DrawerID", $drawer["DrawerID"]);
 			$output .= addEditDeleteButtonsJS("DrawerID", $drawer["DrawerID"]);
 			$output .= createDrawerContentView($drawer["DrawerID"]);
-			$output .= "</div><br />";
+			$output .= "</div>";
 		}
 	} else {
 		$output .= "<p>There are no drawers in this freezer yet. Please add them.</p>";

@@ -24,9 +24,6 @@ if(isset($_POST["drawerID"])) {
 	$data .= "\"content\":" . json_encode($dataContent);
 	$data .= "}";
 	echo $data;
-} else {
-	$data = array("There is no data - no POST vars", 1, 2, 3, 4, 5);
-	echo json_encode($data);
 }
 
 

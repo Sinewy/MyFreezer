@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f270e25-2ef6-4317-937f-7016bd8275d1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saveDrawerData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freezerDetail.php" afterPath="$PROJECT_DIR$/freezerDetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getDrawerData.php" afterPath="$PROJECT_DIR$/getDrawerData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalFunctions.php" afterPath="$PROJECT_DIR$/globalFunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainScript.js" afterPath="$PROJECT_DIR$/js/mainScript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyFridge.iws" />
@@ -17,8 +22,8 @@
     <file path="/header.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405940858401" ignored="false" />
     <file path="/deleteFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405030572553" ignored="false" />
     <file path="/modifyFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405889027172" ignored="false" />
-    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190643744" ignored="false" />
-    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190414768" ignored="false" />
+    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406225857709" ignored="false" />
+    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406224352034" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..drawer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406189693930" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..freezer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115373117" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..age" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885296583" ignored="false" />
@@ -27,12 +32,13 @@
     <file path="/dummy.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/a.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/README.md" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405189217646" ignored="false" />
-    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406202073053" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406202076709" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..gender" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050583963" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..user" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885275822" ignored="false" />
-    <file path="/mainScript.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406201891048" ignored="false" />
+    <file path="/mainScript.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406237976485" ignored="false" />
     <file path="/modifyDrawer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405948119723" ignored="false" />
     <file path="/getDrawerData.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190055526" ignored="false" />
+    <file path="/saveDrawerData.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406238604429" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,38 +107,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainDashboard.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainDashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="56" selection-start="643" selection-end="643" vertical-scroll-proportion="9.269231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modifyFreezer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modifyFreezer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="23" selection-start="2647" selection-end="2647" vertical-scroll-proportion="-8.192307">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="freezerDetail.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freezerDetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="60" selection-start="1836" selection-end="1853" vertical-scroll-proportion="-10.846154">
+            <state line="77" column="14" selection-start="2379" selection-end="2452" vertical-scroll-proportion="-15.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainScript.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mainScript.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mainScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="7" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.9493294">
-              <folding />
+            <state line="124" column="42" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#322#1122#0" expanded="false" />
+                <element signature="e#458#611#0" expanded="false" />
+                <element signature="e#617#1058#0" expanded="false" />
+                <element signature="e#1159#1618#0" expanded="false" />
+                <element signature="e#1664#1699#0" expanded="false" />
+                <element signature="e#1781#3637#0" expanded="false" />
+                <element signature="e#3730#4133#0" expanded="false" />
+                <element signature="e#4210#4249#0" expanded="false" />
+                <element signature="e#4281#4396#0" expanded="false" />
+                <element signature="e#4427#4561#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,10 +139,17 @@
       <file leaf-file-name="getDrawerData.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getDrawerData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-9.807693">
-              <folding>
-                <marker date="1406191592882" expanded="true" signature="305:730" placeholder="..." />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="265" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveDrawerData.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/saveDrawerData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="2" selection-start="632" selection-end="632" vertical-scroll-proportion="0.67173254">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,9 +166,9 @@
       <file leaf-file-name="globalFunctions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globalFunctions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="13" selection-start="5485" selection-end="5485" vertical-scroll-proportion="-8.884615">
+            <state line="264" column="30" selection-start="7216" selection-end="7216" vertical-scroll-proportion="-15.615385">
               <folding>
-                <marker date="1406190814972" expanded="true" signature="6732:7301" placeholder="..." />
+                <marker date="1406226661960" expanded="true" signature="6732:7336" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -172,24 +178,6 @@
         <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="110" column="19" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modifyDrawer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modifyDrawer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="6" selection-start="330" selection-end="330" vertical-scroll-proportion="-10.461538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formValidationFunctions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formValidationFunctions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -221,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/registerNewUser.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..freezer" />
@@ -233,9 +220,10 @@
         <option value="$PROJECT_DIR$/modifyDrawer.php" />
         <option value="db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/" />
         <option value="$PROJECT_DIR$/css/mainStyles.css" />
-        <option value="$PROJECT_DIR$/globalFunctions.php" />
-        <option value="$PROJECT_DIR$/freezerDetail.php" />
         <option value="$PROJECT_DIR$/getDrawerData.php" />
+        <option value="$PROJECT_DIR$/freezerDetail.php" />
+        <option value="$PROJECT_DIR$/globalFunctions.php" />
+        <option value="$PROJECT_DIR$/saveDrawerData.php" />
         <option value="$PROJECT_DIR$/js/mainScript.js" />
       </list>
     </option>
@@ -308,20 +296,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyFridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myfridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,7 +546,11 @@
       <created>1406202074981</created>
       <updated>1406202074981</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="popup form">
+      <created>1406202078673</created>
+      <updated>1406202078673</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -685,7 +663,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -693,11 +671,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery-1.11.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -781,32 +754,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getDrawerData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-9.807693">
-          <folding>
-            <marker date="1406191592882" expanded="true" signature="305:730" placeholder="..." />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="265" vertical-scroll-proportion="-0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/globalFunctions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="13" selection-start="5485" selection-end="5485" vertical-scroll-proportion="-8.884615">
+        <state line="264" column="30" selection-start="7216" selection-end="7216" vertical-scroll-proportion="-15.615385">
           <folding>
-            <marker date="1406190814972" expanded="true" signature="6732:7301" placeholder="..." />
+            <marker date="1406226661960" expanded="true" signature="6732:7336" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freezerDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="60" selection-start="1836" selection-end="1853" vertical-scroll-proportion="-10.846154">
+        <state line="77" column="14" selection-start="2379" selection-end="2452" vertical-scroll-proportion="-15.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mainScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.9493294">
+        <state line="124" column="42" selection-start="4919" selection-end="4919" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#322#1122#0" expanded="false" />
+            <element signature="e#458#611#0" expanded="false" />
+            <element signature="e#617#1058#0" expanded="false" />
+            <element signature="e#1159#1618#0" expanded="false" />
+            <element signature="e#1664#1699#0" expanded="false" />
+            <element signature="e#1781#3637#0" expanded="false" />
+            <element signature="e#3730#4133#0" expanded="false" />
+            <element signature="e#4210#4249#0" expanded="false" />
+            <element signature="e#4281#4396#0" expanded="false" />
+            <element signature="e#4427#4561#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveDrawerData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="2" selection-start="632" selection-end="632" vertical-scroll-proportion="0.67173254">
           <folding />
         </state>
       </provider>
