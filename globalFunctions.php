@@ -205,6 +205,21 @@ function findAllDrawersForFreezer($freezerId) {
 //	}
 }
 
+function findDrawerByDrawerId($drawerId) {
+	global $dbc;
+	$query  = "SELECT * ";
+	$query .= "FROM drawer ";
+	$query .= "WHERE DrawerID = {$drawerId} ";
+	$query .= "LIMIT 1 ";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	if($drawerData = mysqli_fetch_assoc($result)) {
+		return $drawerData;
+	} else {
+		return null;
+	}
+}
+
 function findAllContentForDrawer($drawerId) {
 	global $dbc;
 	$query  = "SELECT * ";
@@ -238,20 +253,44 @@ function createDrawerContentView($drawerId) {
 
 function createFreezerDrawerView($freezerId) {
 	$drawerData = findAllDrawersForFreezer($freezerId);
-	$output = "<div class=\"drawer\">";
+	$output = "<div class=\"drawers\">";
 	if(mysqli_num_rows($drawerData) > 0) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
+			$output .= "<div class=\"drawer\">";
 			$output .= $drawer["Name"] . "  ";
 			$output .= $drawer["Description"] . "  ";
+//			$output .= addEditDeleteButtons("DrawerID", $drawer["DrawerID"]);
+			$output .= addEditDeleteButtonsJS("DrawerID", $drawer["DrawerID"]);
 			$output .= createDrawerContentView($drawer["DrawerID"]);
+			$output .= "</div><br />";
 		}
 	} else {
 		$output .= "<p>There are no drawers in this freezer yet. Please add them.</p>";
 	}
-	$output .= "</div>";
+	$output .= "</div><br />";
 	return $output;
 }
 
+function addEditDeleteButtons($elementName, $elementId) {
+	$buttonsOutput = "<div class=\"modifyBox\">";
+	$buttonsOutput .= "<form enctype=\"multipart/form-data\" action=\"freezerDetail.php\" method=\"POST\" class=\"fakeForm\">";
+	$buttonsOutput .= "<input type=\"hidden\" name=\"{$elementName}\" value=\"" . $elementId . "\"/>";
+	$buttonsOutput .= "<input type=\"submit\" name=\"editBtnPressed\" value=\"Edit\" />";
+	$buttonsOutput .= "</form>";
+	$buttonsOutput .= "<form enctype=\"multipart/form-data\" action=\"freezerDetail.php\" method=\"POST\" class=\"fakeForm\">";
+	$buttonsOutput .= "<input type=\"hidden\" name=\"{$elementName}\" value=\"" . $elementId . "\"/>";
+	$buttonsOutput .= "<input type=\"submit\" name=\"deleteBtnPressed\" value=\"Delete\" />";
+	$buttonsOutput .= "</form></div>";
+	return $buttonsOutput;
+}
+
+function addEditDeleteButtonsJS($elementName, $elementId) {
+	$buttonsOutput = "<div class=\"modifyBox\">";
+	$buttonsOutput .= "<input class=\"editDrawerDataBtn\" type=\"button\" name=\"editBtn" . $elementId . "\" value=\"Edit\" />";
+	$buttonsOutput .= "<input class=\"deleteDrawerBtn\" type=\"button\" name=\"deleteBtn" . $elementId . "\" value=\"Delete\" />";
+	$buttonsOutput .= "</div>";
+	return $buttonsOutput;
+}
 
 
 

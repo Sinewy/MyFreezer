@@ -39,8 +39,7 @@
 			}
 		}
 
-		//TODO - ce kliknem cance in mam v sessionu freezer ID ga zbrisem
-		//TODO - ce recem EDIT in potem podatkov ne spremenim in recem SAVE - edit failed - v tem primeru v resnic ni failed pa nism spremenu...
+		//TODO - ce recem EDIT in potem podatkov ne spremenim in recem SAVE - edit failed - v tem primeru v resnic ni failed pac nism spremenu...
 
 		if(empty($errors)) {
 			$freezerId = $_SESSION["freezerID"];
@@ -48,11 +47,9 @@
 				$r = updateFreezerDataForFreezerIdAndUserId($userId, $freezerId, $freezerName, $freezerDescription, $freezerLocation, $freezerMake);
 				if($r) {
 					$_SESSION["message"] = "Freezer data edit successful.";
-					$_SESSION["freezerID"] = null;
 					redirectTo("mainDashboard.php");
 				} else {
 					$_SESSION["message"] = "Freezer data edit failed.";
-					$_SESSION["freezerID"] = null;
 					redirectTo("mainDashboard.php");
 				}
 			} else {
@@ -128,19 +125,20 @@
 	</div>
 
 
-<!---->
-<!---->
-<!---->
-<!--			<div>-->
-<!--				<pre>-->
-<!--					--><?php
-//
-//						print_r($_POST);
-//
-//					?>
-<!--				</pre>-->
-<!--			</div>-->
-<!---->
+
+
+
+			<div>
+				<pre>
+					<?php
+
+						print_r($_POST);
+						print_r($_SESSION);
+
+					?>
+				</pre>
+			</div>
+
 
 	<div class="testCssClass">
 		<p>Are You SURE?</p>

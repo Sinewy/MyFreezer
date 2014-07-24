@@ -98,8 +98,18 @@ table {
     padding: 5px;
 }
 
+.drawer {
+    width: 400px;
+    /*float: left;*/
+}
 
+.hiddenElement {
+    display: none;
+}
 
+.showElement {
+    display: block;
+}
 
 
 

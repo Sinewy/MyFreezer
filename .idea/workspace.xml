@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f270e25-2ef6-4317-937f-7016bd8275d1" name="Default" comment="testni komit 1">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\ant.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\myfridge\.idea\workspace.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDrawerData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-1.11.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-1.11.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mainScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modifyDrawer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freezerDetail.php" afterPath="$PROJECT_DIR$/freezerDetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalFunctions.php" afterPath="$PROJECT_DIR$/globalFunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainDashboard.php" afterPath="$PROJECT_DIR$/mainDashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mainStyles.css" afterPath="$PROJECT_DIR$/css/mainStyles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modifyFreezer.php" afterPath="$PROJECT_DIR$/modifyFreezer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyFridge.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/mainStyles.css" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118594343" ignored="false" />
+    <file path="/mainStyles.css" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406114162249" ignored="false" />
     <file path="/sendemail2.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404395296360" ignored="false" />
     <file path="/sendMail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404395685265" ignored="false" />
     <file path="/registerNewUser.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404416902049" ignored="false" />
@@ -27,20 +26,25 @@
     <file path="/index.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404983166276" ignored="false" />
     <file path="/showFreezers.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404985070341" ignored="false" />
     <file path="/mainDashboard.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405112860027" ignored="false" />
-    <file path="/header.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404983859196" ignored="false" />
+    <file path="/header.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405940858401" ignored="false" />
     <file path="/deleteFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405030572553" ignored="false" />
-    <file path="/modifyFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115811982" ignored="false" />
-    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405119185344" ignored="false" />
-    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405116525046" ignored="false" />
-    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..drawer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115328168" ignored="false" />
+    <file path="/modifyFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405889027172" ignored="false" />
+    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190643744" ignored="false" />
+    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190414768" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..drawer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406189693930" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..freezer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115373117" ignored="false" />
-    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..age" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115554673" ignored="false" />
-    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..content" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115557697" ignored="false" />
-    <file path="/myFridge DB" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118730688" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..age" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885296583" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..content" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050657283" ignored="false" />
+    <file path="/myFridge DB" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050231056" ignored="false" />
     <file path="/dummy.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/a.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/README.md" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405189217646" ignored="false" />
-    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405192408209" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885238375" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..gender" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050583963" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..user" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885275822" ignored="false" />
+    <file path="/mainScript.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406201891048" ignored="false" />
+    <file path="/modifyDrawer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405948119723" ignored="false" />
+    <file path="/getDrawerData.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406190055526" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,23 +113,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="registerNewUser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registerNewUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="84" selection-start="795" selection-end="871" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mainDashboard.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="35" selection-start="492" selection-end="520" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1405112864462" expanded="false" signature="801:839" placeholder="..." />
-                <marker date="1405112864462" expanded="false" signature="1539:1950" placeholder="..." />
-              </folding>
+            <state line="22" column="56" selection-start="643" selection-end="643" vertical-scroll-proportion="9.269231">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,16 +125,45 @@
       <file leaf-file-name="modifyFreezer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modifyFreezer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="144" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0">
+            <state line="69" column="23" selection-start="2647" selection-end="2647" vertical-scroll-proportion="-8.192307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="freezerDetail.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="freezerDetail.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freezerDetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="12" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.71363634">
+            <state line="64" column="60" selection-start="1836" selection-end="1853" vertical-scroll-proportion="-10.846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainScript.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/mainScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="42" selection-start="626" selection-end="626" vertical-scroll-proportion="0.40416047">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getDrawerData.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getDrawerData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-9.807693">
+              <folding>
+                <marker date="1406191592882" expanded="true" signature="305:730" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFridge DB" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="21" selection-start="0" selection-end="20" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -151,19 +172,10 @@
       <file leaf-file-name="globalFunctions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globalFunctions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="236" column="1" selection-start="6256" selection-end="6256" vertical-scroll-proportion="-12.961538">
+            <state line="215" column="13" selection-start="5485" selection-end="5485" vertical-scroll-proportion="-8.884615">
               <folding>
-                <marker date="1405119220406" expanded="false" signature="6391:6748" placeholder="..." />
+                <marker date="1406190814972" expanded="true" signature="6732:7301" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formValidationFunctions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formValidationFunctions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,16 +183,25 @@
       <file leaf-file-name="mainStyles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="16" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
+            <state line="110" column="19" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myFridge DB" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
+      <file leaf-file-name="modifyDrawer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modifyDrawer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="0" selection-end="21" vertical-scroll-proportion="0.0">
+            <state line="16" column="6" selection-start="330" selection-end="330" vertical-scroll-proportion="-10.461538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formValidationFunctions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formValidationFunctions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -212,22 +233,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/activate.php" />
-        <option value="$PROJECT_DIR$/showFreezers.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/registerNewUser.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..freezer" />
         <option value="$PROJECT_DIR$/deleteFreezer.php" />
-        <option value="$PROJECT_DIR$/mainDashboard.php" />
+        <option value="$PROJECT_DIR$/testRepo/README.md" />
         <option value="$PROJECT_DIR$/modifyFreezer.php" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/mainDashboard.php" />
+        <option value="$PROJECT_DIR$/modifyDrawer.php" />
+        <option value="db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/" />
         <option value="$PROJECT_DIR$/css/mainStyles.css" />
         <option value="$PROJECT_DIR$/globalFunctions.php" />
-        <option value="$PROJECT_DIR$/testRepo/README.md" />
-        <option value="db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/" />
         <option value="$PROJECT_DIR$/freezerDetail.php" />
+        <option value="$PROJECT_DIR$/getDrawerData.php" />
+        <option value="$PROJECT_DIR$/js/mainScript.js" />
       </list>
     </option>
   </component>
@@ -269,7 +290,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -289,8 +309,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,7 +568,11 @@
       <created>1405191937456</created>
       <updated>1405191937456</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="testni komit 1">
+      <created>1405192449513</created>
+      <updated>1405192449513</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -532,15 +599,17 @@
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893497" sideWeight="0.4914621" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23374176" sideWeight="0.48719317" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.67106503" order="3" side_tool="false" content_ui="tabs" x="1297" y="175" width="275" height="614" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14674494" sideWeight="0.67106503" order="3" side_tool="false" content_ui="tabs" x="1297" y="175" width="275" height="614" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893497" sideWeight="0.5048026" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.49839914" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15795091" sideWeight="0.21907459" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -554,10 +623,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -586,7 +653,7 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
@@ -617,7 +684,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -625,88 +692,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="0" selection-end="21" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="730" selection-end="730" vertical-scroll-proportion="0.59422493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registerNewUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="84" selection-start="795" selection-end="871" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deleteFreezer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="654" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/phpEssentials/19_09-final/widget_corp/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="5" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/phpEssentials/19_09-final/widget_corp/public/edit_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="34" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/session.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.11.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modifyFreezer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="144" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="492" selection-end="520" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1405112864462" expanded="false" signature="801:839" placeholder="..." />
-            <marker date="1405112864462" expanded="false" signature="1539:1950" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.11.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="16" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
+    <entry file="file://$PROJECT_DIR$/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="0" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.1030303">
           <folding />
         </state>
       </provider>
@@ -718,18 +736,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modifyDrawer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="6" selection-start="330" selection-end="330" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainDashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="56" selection-start="643" selection-end="643" vertical-scroll-proportion="9.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="400" selection-end="400" vertical-scroll-proportion="0.18622848">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="19" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="21" selection-start="0" selection-end="20" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modifyFreezer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="23" selection-start="2647" selection-end="2647" vertical-scroll-proportion="-8.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getDrawerData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="-9.807693">
+          <folding>
+            <marker date="1406191592882" expanded="true" signature="305:730" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/globalFunctions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="1" selection-start="6256" selection-end="6256" vertical-scroll-proportion="-12.961538">
+        <state line="215" column="13" selection-start="5485" selection-end="5485" vertical-scroll-proportion="-8.884615">
           <folding>
-            <marker date="1405119220406" expanded="false" signature="6391:6748" placeholder="..." />
+            <marker date="1406190814972" expanded="true" signature="6732:7301" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freezerDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="12" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.71363634">
+        <state line="64" column="60" selection-start="1836" selection-end="1853" vertical-scroll-proportion="-10.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mainScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="626" selection-end="626" vertical-scroll-proportion="0.40416047">
           <folding />
         </state>
       </provider>
