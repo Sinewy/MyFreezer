@@ -27,7 +27,7 @@
     <file path="/dummy.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/a.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/README.md" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405189217646" ignored="false" />
-    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406202065065" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406202073053" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..gender" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050583963" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..user" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885275822" ignored="false" />
     <file path="/mainScript.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406201891048" ignored="false" />
@@ -131,7 +131,7 @@
       <file leaf-file-name="mainScript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/mainScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="9" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.84798807">
+            <state line="40" column="7" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.9493294">
               <folding />
             </state>
           </provider>
@@ -568,7 +568,11 @@
       <created>1406202069526</created>
       <updated>1406202069526</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="popup form">
+      <created>1406202074981</created>
+      <updated>1406202074981</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -802,7 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mainScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="9" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.84798807">
+        <state line="40" column="7" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.9493294">
           <folding />
         </state>
       </provider>
