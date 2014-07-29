@@ -233,6 +233,32 @@ function findAllContentForDrawer($drawerId) {
 
 //******************* Layout Functions ***********************\\
 
+function createEditDrawerContentView($drawerId) {
+	$allContent = findAllContentForDrawer($drawerId);
+	$output = "";
+	if(mysqli_num_rows($allContent) > 0) {
+		while($content = mysqli_fetch_assoc($allContent)) {
+			$cId = $content["ContentID"];
+			$cDesc = $content["Description"];
+			$cAmnt = $content["Amount"];
+			$cQty = $content["Quantity"];
+			//$packingDate = "";
+			$packingDate = $content["PackingDate"];
+			
+			$output .=  "<div class='contentRowStyle' id='contentRow" . $cId . "'>";
+			$output .=  "<input type='text' id='contentDescription" . $cId . "' name='contentDescription" . $cId . "' size='60' placeholder='enter content: stakes' value='" . $cDesc . "' />";
+			$output .=  "<input type='text' id='contentAmount" . $cId . "' name='contentAmount" . $cId . "' size='30' placeholder='enter amount: 2 pieces' value='" . $cAmnt . "' />";
+			$output .=  "<input type='number' id='contentQuantity" . $cId . "' name='contentQuantity" . $cId . "' min='1' max='20' placeholder='quantity: 4' value='" . $cQty . "' />";
+			$output .=  "<input type='date' id='contentDate" . $cId . "' name='contentPackingDate" . $cId . "' placeholder='mm/dd/YYYY' value='" . $packingDate . "' />";
+			$output .=  "<input type='button' class='deleteCurrentRowBtn'  name='" . $cId . "' value='Delete' />";
+			$output .=  "</div>";
+		}
+	} else {
+		$output .= "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
+	}
+	return $output;
+}
+
 function createDrawerContentView($drawerId) {
 	$allContent = findAllContentForDrawer($drawerId);
 	$output = "<div class=\"content\">";

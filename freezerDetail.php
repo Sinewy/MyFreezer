@@ -69,6 +69,13 @@ if(isset($_GET["fid"])) {
 
 	</div>
 
+	<form action="addOrEditDrawerData.php" method="POST">
+		<fieldset>
+			<input type="hidden" name="addOrEditData" value="true" />
+			<input type="submit" value="Add/Edit data" />
+		</fieldset>
+	</form>
+
 	<div>
 		<pre>
 			<?php
