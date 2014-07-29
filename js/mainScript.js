@@ -8,33 +8,6 @@ $(document).ready(function() {
 
     // ************ variables ************//
 
-//    $("#addNewDrawerBtn, .editDrawerDataBtn").click(showAddEditWindow);
-//    function showAddEditWindow() {
-//        disableButtons();
-//
-//        console.log(drawerId + " drawer id - show edit windiw");
-//
-//        if(this.id == "addNewDrawerBtn") {
-//            console.log("add new drawer " + this.id);
-//            console.log(" drawer ididid: " + drawerId);
-//            addNewContentRow();
-//        } else {
-//            var drawerName = this.name;
-//            drawerId = drawerName.substring(7);
-//            console.log("edit drawer data for drawer: " + drawerId);
-//
-//            var ajaxRequest = $.ajax({
-//                type: "POST",
-//                url: "getDrawerData.php",
-//                data: {drawerID: drawerId}
-//            });
-//            ajaxRequest.done(function(data) {
-//                handleDrawerData(data);
-//            });
-//        }
-//        $("#addEditDrawer").toggleClass("hiddenElement");
-//    }
-
     $("#addNewDrawerBtn, .editDrawerDataBtn").click(function() {
         var dId = null;
         if(this.id == "addNewDrawerBtn") {
@@ -49,16 +22,27 @@ $(document).ready(function() {
         showAddEditWindow(dId);
     });
 
+    //TODO - try to do it with GET option
     function showAddEditWindow(id) {
         $.colorbox({
-            open: true,
-            //iframe:true,
-            scrolling: false,
-            innerWidth:'800',
+            iframe:true,
+            //open: true,
+            //transition: "fade",
+            scrolling: true,
+            innerWidth:'960',
             innerHeight:'600',
-            href:"testIframePost.php",
-            data:{drawerID: id, itemType: "POSTIC madafakaaa...", addOrEditData: true},
-            //href:"testIframePost.php?LinkID=" + 21635984 + "&itemType=" + "DzureTIPEK",
+            href:"addOrEditDrawerData.php",
+            //data:{drawerID: id, addOrEditData: true},
+            //href:"testIframePost.php",
+            href:"addOrEditDrawerData.php?drawerID=" + id + "&addOrEditData=true",
+//            onComplete:function() {
+//                $("#addNewContentBtn").on("click", function() {
+//                    //(".addNewContentLine").on("click", function() {
+//                    console.log("btn was clicked");
+//                    addNewContentRow();
+//                });
+//            },
+
             onClosed:function(){
                 //Do something on close.
             }
@@ -78,29 +62,19 @@ $(document).ready(function() {
         }
     }
 
+
+
     $("#addNewContentBtn").click(function() {
+        console.log("btn was clicked");
         addNewContentRow();
     });
 
     function addNewContentRow() {
-//    function addNewContentRow(contentId, description, amount, quantity, date) {
 
-//        contentId = typeof contentId !== 'undefined' ?  contentId : "noId" + contentRowNumber;
-//        description = typeof description !== 'undefined' ?  description : "";
-//        amount = typeof amount !== 'undefined' ?  amount : "";
-//        quantity = typeof quantity !== 'undefined' ?  quantity : 1;
-//        date = typeof date !== 'undefined' ?  date : "";
+        console.log("btn was clicked AGAIN");
 
         var contentId = "noId" + contentRowNumber;
         var contentRow = "";
-
-//        contentRow +=  "<div class=\"contentRowStyle\" id=\"contentRow" + contentId + "\">";
-//        contentRow +=  "<input type=\"text\" id=\"contentDescription" + contentId + "\" name=\"contentDescription" + contentId + "\" size=\"60\" placeholder=\"enter content: stakes\" value=\"" + description + "\" />";
-//        contentRow +=  "<input type=\"text\" id=\"contentAmount" + contentId + "\" name=\"contentAmount" + contentId + "\" size=\"30\" placeholder=\"enter amount: 2 pieces\" value=\"" + amount + "\" />";
-//        contentRow +=  "<input type=\"number\" id=\"contentQuantity" + contentId + "\" name=\"contentQuantity" + contentId + "\" min=\"1\" max=\"20\" placeholder=\"quantity: 4\" value=\"" + quantity + "\" />";
-//        contentRow +=  "<input type=\"date\" id=\"contentDate" + contentId + "\" name=\"contentDate" + contentId + "\" placeholder=\"mm/dd/YYYY\" value=\"" + date + "\" />";
-//        contentRow +=  "<input class=\"deleteCurrentRowBtn\" type=\"button\" name=\"" + contentId + "\" value=\"Delete\" />";
-//        contentRow +=  "</div>";
 
         contentRow +=  "<div class=\"contentRowStyle\" id=\"contentRow" + contentId + "\">";
         contentRow +=  "<input type=\"text\" id=\"contentDescription" + contentId + "\" name=\"contentDescription" + contentId + "\" size=\"60\" placeholder=\"enter content: stakes\" />";
@@ -111,33 +85,19 @@ $(document).ready(function() {
         contentRow +=  "</div>";
 
         if($("#emptyDrawer").length != 0) {
+            console.log("empty exists");
             $("#emptyDrawer").replaceWith(contentRow);
         } else {
+            console.log("empty DOES NOT exist");
             $("#drawerContent").append(contentRow);
         }
+        console.log("over empty check");
 
         $("#contentRow" + contentId + " .deleteCurrentRowBtn").on("click", deleteContentRow);
-
-//        $("#contentRow" + contentId + " .deleteCurrentRowBtn").on("click", function() {
-//            console.log(this.name.indexOf("noId"));
-//            if(this.name.indexOf("noId") == -1) {
-//                contentRowsToBeDeleted.push(contentId);
-//            }
-//            $("#contentRow" + this.name).remove();
-//        });
-
         contentRowNumber++;
     }
 
     $(".deleteCurrentRowBtn").on("click", deleteContentRow);
-
-//    $(".deleteCurrentRowBtn").on("click", function() {
-//        console.log(this.name.indexOf("noId"));
-//        if(this.name.indexOf("noId") == -1) {
-//            contentRowsToBeDeleted.push(this.name);
-//        }
-//        $("#contentRow" + this.name).remove();
-//    });
 
     function deleteContentRow() {
         console.log(this.name.indexOf("noId"));
@@ -146,7 +106,13 @@ $(document).ready(function() {
             contentRowsToBeDeleted.push(this.name);
             console.log(this.name);
         }
-        $("#contentRow" + this.name).remove();
+        console.log($(".contentRowStyle").length + "  length for .contentRowStyle");
+        if($(".contentRowStyle").length > 1) {
+            $("#contentRow" + this.name).remove();
+        } else {
+            $("#contentRow" + this.name).replaceWith("<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>");
+        }
+
     }
 
     $("#cancelDrawerDataBtn").click(cleanupAfterCancel);
@@ -214,8 +180,16 @@ $(document).ready(function() {
 
 
     $("#saveEditDrawerDataForm").click(function() {
-        //TODO - add hidden input to provide which contentIDs to delete from db
+        var hiddentElement = "";
+        if(contentRowsToBeDeleted.length > 0) {
+            hiddentElement += "<input type='hidden' name='contentToBeDeletedArray' value=" + contentRowsToBeDeleted + " />";
+        }
+        $("#submitOrCancel").append(hiddentElement);
         $("#addEditDrawerForm").submit();
+    });
+
+    $("#cancelAndCloseForm").click(function() {
+        parent.$.colorbox.close();
     });
 
 

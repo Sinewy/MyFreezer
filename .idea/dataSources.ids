@@ -25,6 +25,7 @@
       <column name="Description" sqlType="VARCHAR" length="90" precision="0" nullable="false" jdbcType="12" />
       <column name="Amount" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
       <column name="Quantity" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ==" />
+      <column name="PackingDate" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="DrawerID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="TimeCreated" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" />
       <column name="TimeModified" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />

@@ -40,51 +40,52 @@ if(isset($_GET["fid"])) {
 </div>
 
 
-
-
-	<div id="addEditDrawer" class="hiddenElement">
-		<form action="freezerDetail.php" method="POST">
-			<fieldset>
-				<div class="drawerDetails">
-					<p>Add or Edit Drawer data</p>
-					<label for="drawerName">Drawer Name:</label>
-					<input type="text" id="drawerName" name="drawerName" size="45" placeholder="enter drawer name" />
-					<label for="drawerDescription">Drawer Description:</label>
-					<input type="text" id="drawerDescription" name="drawerDescription" size="45" placeholder="enter drawer description" />
-				</div>
-				<div id="drawerContent">
-					<p>Content</p>
-					<p>Name/Description | Amount | Quantity | Date</p>
-				</div>
-				<div class="addNewContentLine">
-					<input type="button" id="addNewContentBtn" name="addNewContent2" value="+" /><span>Add new Content line</span>
-				</div>
-				<div class="submitOrCancel">
-					<!--					<button type="submit" name="submutDrawerData">Save</button>-->
-					<input type="button" id="saveDrawerData" name="saveDrawerData" value="Save" />
-					<button id="cancelDrawerDataBtn" type="button" name="cancelAndClose">Cancel</button>
-				</div>
-			</fieldset>
-		</form>
-
-	</div>
-
-	<form action="addOrEditDrawerData.php" method="POST">
-		<fieldset>
-			<input type="hidden" name="addOrEditData" value="true" />
-			<input type="submit" value="Add/Edit data" />
-		</fieldset>
-	</form>
-
-	<div>
-		<pre>
-			<?php
-			print_r($_GET);
-			print_r($_SESSION);
-			print_r($_POST);
-			?>
-		</pre>
-	</div>
+<!---->
+<!---->
+<!--	<div id="addEditDrawer" class="hiddenElement">-->
+<!--		<form action="freezerDetail.php" method="POST">-->
+<!--			<fieldset>-->
+<!--				<div class="drawerDetails">-->
+<!--					<p>Add or Edit Drawer data</p>-->
+<!--					<label for="drawerName">Drawer Name:</label>-->
+<!--					<input type="text" id="drawerName" name="drawerName" size="45" placeholder="enter drawer name" />-->
+<!--					<label for="drawerDescription">Drawer Description:</label>-->
+<!--					<input type="text" id="drawerDescription" name="drawerDescription" size="45" placeholder="enter drawer description" />-->
+<!--				</div>-->
+<!--				<div id="drawerContent">-->
+<!--					<p>Content</p>-->
+<!--					<p>Name/Description | Amount | Quantity | Date</p>-->
+<!--				</div>-->
+<!--				<div class="addNewContentLine">-->
+<!--					<input type="button" id="addNewContentBtn" name="addNewContent2" value="+" /><span>Add new Content line</span>-->
+<!--				</div>-->
+<!--				<div class="submitOrCancel">-->
+<!--					<!--					<button type="submit" name="submutDrawerData">Save</button>-->
+<!--					<input type="button" id="saveDrawerData" name="saveDrawerData" value="Save" />-->
+<!--					<button id="cancelDrawerDataBtn" type="button" name="cancelAndClose">Cancel</button>-->
+<!--				</div>-->
+<!--			</fieldset>-->
+<!--		</form>-->
+<!---->
+<!--	</div>-->
+<!---->
+<!--<!---->
+<!--	<form action="addOrEditDrawerData.php" method="POST">-->
+<!--		<fieldset>-->
+<!--			<input type="hidden" name="addOrEditData" value="true" />-->
+<!--			<input type="submit" value="Add/Edit data" />-->
+<!--		</fieldset>-->
+<!--	</form>-->
+<!---->
+<!--	<div>-->
+<!--		<pre>-->
+<!--			--><?php
+//			print_r($_GET);
+//			print_r($_SESSION);
+//			print_r($_POST);
+//			?>
+<!--		</pre>-->
+<!--	</div>-->
 
 <?php
 //	echo "*********************";
