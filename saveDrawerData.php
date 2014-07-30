@@ -5,30 +5,44 @@
 <?php confirmLoggedIn(); ?>
 
 <?php
+$pageTitle = "Saving Drawer Data";
+$userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
+$freezerId = isset($_SESSION["FreezerID"]) ? $_SESSION["FreezerID"] : null;
+
+$output = "";
 
 if(isset($_POST["saveData"])) {
 
-	$output = "<br />";
-	$output .= "<div><p>hej kwa je zdeeejjj </p>";
-	$output .= "<br /><pre>";
-	$output .= print_r($_POST);
-	//$output .= implode(" ", $_POST);
-	$output .= "</pre><br />";
+	$drawerId = $_POST["drawerId"];
+	$drawerName = $_POST["drawerName"];
+	$drawerDescription = $_POST["drawerDescription"];
+	$contentData =  isset($_POST["contentData"]) ? $_POST["contentData"] : null ;
+	$contentDelete =  isset($_POST["contentDelete"]) ? $_POST["contentDelete"]: null;
 
-	//$output .= "</div>";
-	$output .= "<br />";
-	$output .=  "drawer id isset: " . isset($_POST["drawerID"]);
-	$output .= "<br />";
-	$output .=  "drawer id isnulll: " . is_null($_POST["drawerID"]);
-	$output .= "<br />";
-	$output .=  "drawer id empty: " . empty($_POST["drawerID"]);
-	$output .= "<br />";
-	$output .=  "drawer id is the folowwing: " . $_POST["drawerID"];
-	$output .= "<br />";
-	$output .=  "delete data id isset: " . isset($_POST["deleteContent"]);
-	$output .= "</div>*******************<br/><br/>";
+	if(strstr($drawerId, "noId")) {
+		//insert new drawer and return new drawerId, content comes later
+		//$drawerId = insertNewDrawerData($freezerId, $drawerName, $drawerDescription);
+	} else {
+		//update drawer data only, content comes later
+		//updateDrawerData($drawerId, $drawerName, $drawerDescription);
+	}
+	if($contentDelete != null) {
+		foreach ($contentDelete as $id) {
+			$output .= $id . "<br/> ";
+			$output = deleteContentById($id);
+		}
+	}
 
-	echo $output;
+
+
+
+//	if(strstr($drawerId, "noId")) {
+//		echo "hellooo it is treueee";
+//	} else {
+//		echo "falsic";
+//	}
+	echo "saveSuccessful";
 }
+
 
 ?>

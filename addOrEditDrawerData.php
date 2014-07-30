@@ -13,6 +13,13 @@ $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 //$_POST["drawerID"] = "noId";
 //$_POST["drawerID"] = 2;
 
+//$_GET["addOrEditData"] = "true";
+//$_GET["drawerID"] = "noId";
+
+//$drawerIdHandler = "";
+//$drawerName = "";
+//$drawerDescription = "";
+
 $arrayOfRows = [];
 $deleteContent = [];
 $contentOutput = "";
@@ -26,10 +33,9 @@ if(isset($_GET["addOrEditData"])) {
 
 		$drawerName = "";
 		$drawerDescription = "";
-		$contentOutput .= "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
-
+		$contentOutput = "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
 		//echo("adding new drawer");
-
+		$_SESSION["drawerID"] = $_GET["drawerID"];
 
 	} elseif(isset($_GET["drawerID"]) && $_GET["drawerID"] != "noId") {
 		$drawerId = $_GET["drawerID"];
@@ -42,14 +48,37 @@ if(isset($_GET["addOrEditData"])) {
 		//$allContent = findAllContentForDrawer($drawerId);
 		//echo $allContent[0]["Description"];
 		$contentOutput = createEditDrawerContentView($drawerId);
-
+		$_SESSION["drawerID"] = $_GET["drawerID"];
 		echo("just editing drawer data");
 	} else {
 		echo("this is a strange case");
 	}
+
+
 } elseif(isset($_POST["submittedSaveData"])) {
+	if($_SESSION["drawerID"] == "noId") {
+		// add new drawer and its content
+		$drawerName = $_POST["drawerName"];
+		$drawerDescription = $_POST["drawerDescription"];
+		if(!hasPresence($drawerName)) {
+			$errors["drawerName"] = ucfirst("Drawer Name") . " can't be blank";
+		}
+		//$contentOutput =
+
+	} else {
+		// update drawer data and add, delete or update content data
+	}
+
+
+
+
+
+
+
+//} elseif(isset($_POST["submittedSaveData"]) && $drawerId == "noId") {
 
 	echo("You just saved the data.");
+//} elseif(isset($_POST["submittedSaveData"]) && $drawerId != "noId") {
 
 } else {
 	// TODO - throw him back
@@ -110,16 +139,17 @@ if(isset($_GET["addOrEditData"])) {
 		<fieldset>
 			<div class="drawerDetails">
 				<p>Add or Edit Drawer data</p>
+				<input type="hidden" id="getDrawerId" name="getDrawerId" value="<?php echo htmlspecialchars($_SESSION["drawerID"]); ?>" />
 				<label for="drawerName">Drawer Name:</label>
-				<input type="text" id="drawerName" name="drawerName" size="45" placeholder="enter drawer name" value="<?php echo htmlspecialchars($drawerName); ?>" /><br />
+				<input type="text" id="drawerName" name="drawerName" size="45" placeholder="enter drawer name" value="<?php echo htmlspecialchars($drawerName); ?>" /><div class="formError" id="dNameError"></div> <br />
 				<label for="drawerDescription">Drawer Description:</label>
-				<input type="text" id="drawerDescription" name="drawerDescription" size="45" placeholder="enter drawer description" value="<?php echo htmlspecialchars($drawerDescription); ?>" />
+				<input type="text" id="drawerDescription" name="drawerDescription" size="45" placeholder="enter drawer description" value="<?php echo htmlspecialchars($drawerDescription); ?>" /><div class="formError" id="dDescriptionError"></div>
 			</div>
 			<hr />
 			<div id="drawerContent">
 				<p>Content</p>
 				<p>Name/Description | Amount | Quantity | Date</p>
-				<?php  echo $contentOutput; ?>
+				<?php echo $contentOutput; ?>
 			</div>
 			<hr />
 			<div class="addNewContentLine">
@@ -138,6 +168,7 @@ if(isset($_GET["addOrEditData"])) {
 <div>
 	<pre>
 	<?php
+		print_r($_GET);
 		print_r($_POST);
 		print_r($_SESSION);
 	?>

@@ -6,3 +6,4 @@
 //TODO - make it not a mistake if i do edit and than not change anything.. SAVE is OK, just didn't do anything
 //TODO - make date picker show the right date format = dd/mm/yyyy
 //TODO - remove X - close BTN in colorbox
+//TODO - check all fields lengths - also check with DB - set appropriate values
