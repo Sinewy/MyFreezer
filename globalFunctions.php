@@ -198,11 +198,46 @@ function findAllDrawersForFreezer($freezerId) {
 	$result = mysqli_query($dbc, $query);
 	confirmQuery($result);
 	return $result;
-//	if($drawerData = mysqli_fetch_assoc($result)) {
-//		return $drawerData;
-//	} else {
-//		return null;
-//	}
+}
+
+function insertNewDrawerData($freezerId, $drawerName, $drawerDescription) {
+	global $dbc;
+	$query  = "INSERT INTO drawer ";
+	$query .= "(Name, Description, FreezerID) ";
+	$query .= "VALUES ('{$drawerName}', '{$drawerDescription}', {$freezerId}) ";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	$resultId = mysqli_insert_id($dbc);
+	return $resultId;
+}
+
+function updateDrawerDataForId($dId, $dName, $dDescription) {
+	global $dbc;
+	$query  = "UPDATE drawer SET ";
+	$query .= "Name = '{$dName}', ";
+	$query .= "Description = '{$dDescription}' ";
+	$query .= "WHERE DrawerID = {$dId} ";
+	$query .= "LIMIT 1";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	if($result && mysqli_affected_rows($dbc) == 1) {
+		// Success
+		return $result;
+	} else {
+		// Failure
+		return null;
+	}
+}
+
+function deleteDrawerById($drawerId){
+	global $dbc;
+	$query  = "DELETE ";
+	$query .= "FROM drawer ";
+	$query .= "WHERE DrawerID = {$drawerId} ";
+	$query .= "LIMIT 1";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	return $result;
 }
 
 function findDrawerByDrawerId($drawerId) {
@@ -229,6 +264,48 @@ function findAllContentForDrawer($drawerId) {
 	confirmQuery($result);
 	return $result;
 }
+
+function insertNewContentRowForDrawerId($dId, $cDescription, $cAmount, $cQty, $cDate) {
+	global $dbc;
+	$cDate = $cDate == "" ? "NULL" : $cDate;
+	$query  = "INSERT INTO content ";
+	$query .= "(Description, Amount, Quantity, PackingDate, DrawerID) ";
+	if($cDate == "NULL"){
+		$query .= "VALUES ('{$cDescription}', '{$cAmount}', {$cQty}, {$cDate}, {$dId}) ";
+	} else {
+		$query .= "VALUES ('{$cDescription}', '{$cAmount}', {$cQty}, '{$cDate}', {$dId}) ";
+	}
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	$resultId = mysqli_insert_id($dbc);
+	return $resultId;
+}
+
+function updateContentRowById($cId, $cDescription, $cAmount, $cQty, $cDate) {
+	global $dbc;
+	$cDate = $cDate == "" ? "NULL" : $cDate;
+	$query  = "UPDATE content SET ";
+	$query .= "Description = '{$cDescription}', ";
+	$query .= "Amount = '{$cAmount}', ";
+	$query .= "Quantity = {$cQty}, ";
+	if($cDate == "NULL"){
+		$query .= "PackingDate = {$cDate} ";
+	} else {
+		$query .= "PackingDate = '{$cDate}' ";
+	}
+	$query .= "WHERE ContentID = {$cId} ";
+	$query .= "LIMIT 1";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	if($result && mysqli_affected_rows($dbc) == 1) {
+		// Success
+		return $result;
+	} else {
+		// Failure
+		return null;
+	}
+}
+
 
 function deleteContentById($contentId) {
 	global $dbc;
@@ -288,6 +365,16 @@ function createFreezerDrawerView($freezerId) {
 	return $output;
 }
 
+function createDrawer($dId) {
+	$dData = findDrawerByDrawerId($dId);
+	$output = "<div class=\"drawer\" id=\"drawer" . $dId . "\">";
+	$output .= createDrawerInfo($dId, $dData["Name"], $dData["Description"]);
+	$output .= addEditDeleteButtonsJS("DrawerID", $dId);
+	$output .= createDrawerContentView($dId);
+	$output .= "</div>";
+	return $output;
+}
+
 function createDrawerInfo($dId, $dName, $dDescription) {
 	$output = "<div class='drawerInfo' id='drawerInfo" . $dId . "'>";
 	$output .= "<p>" . $dName . "</p>";
@@ -307,7 +394,7 @@ function createDrawerContentView($drawerId) {
 			$output .= "<td>" . $content["Quantity"] . "</td></tr>";
 		}
 	} else {
-		$output .= "<tr><td colspan=\"3\">This drawer is empty.</td></tr>";
+		$output .= "<tr><td class='emptyDrawer' colspan=\"3\">This drawer is empty.</td></tr>";
 	}
 	$output .= "</table>";
 	$output .= "</div>";

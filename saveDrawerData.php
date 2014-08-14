@@ -21,18 +21,34 @@ if(isset($_POST["saveData"])) {
 
 	if(strstr($drawerId, "noId")) {
 		//insert new drawer and return new drawerId, content comes later
-		//$drawerId = insertNewDrawerData($freezerId, $drawerName, $drawerDescription);
+		$drawerId = insertNewDrawerData(7, $drawerName, $drawerDescription);
 	} else {
 		//update drawer data only, content comes later
-		//updateDrawerData($drawerId, $drawerName, $drawerDescription);
+		updateDrawerDataForId($drawerId, $drawerName, $drawerDescription);
 	}
 	if($contentDelete != null) {
+		// delete the required content
 		foreach ($contentDelete as $id) {
-			$output .= $id . "<br/> ";
-			$output = deleteContentById($id);
+			deleteContentById($id);
 		}
 	}
 
+	foreach($contentData as $dataObj) {
+		if(strstr($dataObj["id"], "noId")) {
+			// we have new content, insert it
+			insertNewContentRowForDrawerId($drawerId, $dataObj["description"], $dataObj["amount"], $dataObj["qty"], $dataObj["date"]);
+		} else {
+			// update existing content data
+			updateContentRowById($dataObj["id"], $dataObj["description"], $dataObj["amount"], $dataObj["qty"], $dataObj["date"]);
+		}
+//		var rowObj = new Object();
+//                rowObj.id = id;
+//                rowObj.description = $("#contentDescription" + id).val();
+//                rowObj.amount = $("#contentAmount" + id).val();
+//                rowObj.qty = $("#contentQuantity" + id).val();
+//                rowObj.date = $("#contentDate" + id).val();
+//                contentRowData.push(rowObj);
+	}
 
 
 

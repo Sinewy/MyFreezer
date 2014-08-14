@@ -69,12 +69,6 @@ if(isset($_GET["addOrEditData"])) {
 		// update drawer data and add, delete or update content data
 	}
 
-
-
-
-
-
-
 //} elseif(isset($_POST["submittedSaveData"]) && $drawerId == "noId") {
 
 	echo("You just saved the data.");
@@ -86,50 +80,13 @@ if(isset($_GET["addOrEditData"])) {
 	echo("You tried to manipulate in a strange way.. MF");
 }
 
-
-//
-//if(isset($_POST["addOrEditData"])) {
-//
-//	echo("you came from freezer detail.");
-//
-//	if(isset($_POST["drawerID"]) && $_POST["drawerID"] == "noId") {
-//
-//
-//		$drawerName = "";
-//		$drawerDescription = "";
-//		$contentOutput .= "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
-//
-//		//echo("adding new drawer");
-//
-//
-//	} elseif(isset($_POST["drawerID"]) && $_POST["drawerID"] != "noId") {
-//		$drawerId = $_POST["drawerID"];
-//		// get data for drawer
-//		$drawerData = findDrawerByDrawerId($drawerId);
-//		$drawerName = $drawerData["Name"];
-//		$drawerDescription = $drawerData["Description"];
-//
-//		// get data for all content
-//		//$allContent = findAllContentForDrawer($drawerId);
-//		//echo $allContent[0]["Description"];
-//		$contentOutput = createEditDrawerContentView($drawerId);
-//
-//		echo("just editing drawer data");
-//	} else {
-//		echo("this is a strange case");
-//	}
-//} elseif(isset($_POST["submittedSaveData"])) {
-//	echo("You just saved the data.");
-//} else {
-//	// TODO - throw him back
-//	//redirectTo("freezerDetail.php");
-//	echo("You tried to manipulate in a strange way.. MF");
-//}
-
 ?>
 
 
 <?php include("includes/header.php"); ?>
+	<script src="js/validationFunctions.js"></script>
+	<script src="js/addOrEditDrawerData.js"></script>
+<?php include("includes/header2.php"); ?>
 
 <?php echo formErrors($errors); ?>
 <?php echo displayMessage(); ?>

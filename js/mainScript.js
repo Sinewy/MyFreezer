@@ -22,18 +22,13 @@ $(document).ready(function() {
         showAddEditWindow(dId);
     });
 
-    //TODO - try to do it with GET option
     function showAddEditWindow(id) {
         $.colorbox({
             iframe:true,
-            //open: true,
             //transition: "fade",
             scrolling: true,
             innerWidth:'960',
             innerHeight:'600',
-            href:"addOrEditDrawerData.php",
-            //data:{drawerID: id, addOrEditData: true},
-            //href:"testIframePost.php",
             href:"addOrEditDrawerData.php?drawerID=" + id + "&addOrEditData=true",
 //            onComplete:function() {
 //                $("#addNewContentBtn").on("click", function() {
@@ -42,28 +37,29 @@ $(document).ready(function() {
 //                    addNewContentRow();
 //                });
 //            },
-
-            onClosed:function(){
-                updateDrawerDisplay(id);
-                //Do something on close.
+            onClosed:function(m){
+                console.log("closing colorbox id: " + id);
+                console.log("closing message: " + m.arg1);
+                $.each(m, function(index, value) {
+                    console.log(index + " :index, values are: " + value);
+                    console.log(index + " :index, values are: " + value);
+                    if(index == "cache"){
+                        $.each(value, function(i, v) {
+                            console.log(1 + " :index, values are: " + v);
+                        });
+                    }
+                });
+//                for(var key in message) {
+//                    console.log(key + " the key and the value: " + message[key]);
+//                }
+                if(id != "noId") {
+                    updateDrawerDisplay(id);
+                } else {
+                    addNewDrawerToView();
+                }
             }
         });
     }
-
-    function handleDrawerData(data){
-        $("#drawerName").val(data.info.Name);
-        $("#drawerDescription").val(data.info.Description);
-        if(data.content.length > 0) {
-            $.each(data.content, function(i, value) {
-                addNewContentRow(value.ContentID, value.Description, value.Amount, value.Quantity);
-                //console.log(value.Description);
-            });
-        } else if(data.content.length == 0) {
-            addNewContentRow();
-        }
-    }
-
-
 
     $("#addNewContentBtn").click(function() {
         //console.log("btn was clicked");
@@ -102,84 +98,21 @@ $(document).ready(function() {
     $(".deleteCurrentRowBtn").on("click", deleteContentRow);
 
     function deleteContentRow() {
-        //console.log(this.name.indexOf("noId"));
-        //console.log(this.name);
         if(this.name.indexOf("noId") == -1) {
             contentRowsToBeDeleted.push(this.name);
-            //console.log(this.name);
         }
-        //console.log($(".contentRowStyle").length + "  length for .contentRowStyle");
         if($(".contentRowStyle").length > 1) {
             $("#contentRow" + this.name).remove();
             $("#fError" + this.name).remove();
         } else {
             $("#contentRow" + this.name).replaceWith("<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>");
         }
-
-    }
-
-    $("#cancelDrawerDataBtn").click(cleanupAfterCancel);
-    function cleanupAfterCancel() {
-
-        //console.log(contentRowsToBeDeleted);
-        //console.log(contentRowsToBeDeleted.length);
-
-        $(".contentRowStyle").remove();
-        $("#addEditDrawer").toggleClass("hiddenElement");
-
-        $("#drawerName").val("");
-        $("#drawerDescription").val("");
-
-        contentRowNumber = 0;
-        contentRowsToBeDeleted = [];
-        drawerId = null;
-
-        enableButtons();
     }
 
     $(".deleteDrawerBtn").click(deleteDrawer);
     function deleteDrawer() {
         console.log(this.name);
     }
-
-    function disableButtons() {
-        $("#addNewDrawerBtn, .editDrawerDataBtn").off("click");
-        $(".deleteDrawerBtn").off("click");
-    }
-
-    function enableButtons() {
-        $("#addNewDrawerBtn, .editDrawerDataBtn").click(showAddEditWindow);
-        $(".deleteDrawerBtn").click(deleteDrawer);
-    }
-
-    $("#saveDrawerData").click(saveDrawerData);
-    function saveDrawerData() {
-        console.log(drawerId + " drawer id");
-        var ajaxRequest = $.ajax({
-            type: "POST",
-            url: "saveDrawerData.php",
-            data: {
-                saveData: true,
-                drawerID: drawerId,
-                deleteContent: contentRowsToBeDeleted
-            },
-            dataType: "html"
-        });
-        ajaxRequest.done(function(data) {
-            updateDrawerDisplay(data);
-        });
-    }
-
-//    function updateDrawerDisplay(data) {
-//        console.log(data);
-//        console.log("  drawer id inside update: " + drawerId);
-//        if(drawerId != null) {
-//            $("#drawer" + drawerId).replaceWith(data);
-//        } else {
-//            $(".drawers").append(data);
-//        }
-//        //cleanupAfterCancel();
-//    }
 
     function updateDrawerDisplay(id) {
         //console.log("  drawer id inside update: " + id);
@@ -190,6 +123,24 @@ $(document).ready(function() {
         });
     }
 
+    function addNewDrawerToView() {
+        //console.log("  drawer id inside update: " + id);
+        var displayedDrawers = [];
+
+        $("[id^='drawer']").each(function() {
+            if(this.id.indexOf("drawerInfo") < 0) {
+                console.log(this.id);
+                console.log(this.id.substring(6));
+                displayedDrawers.push(this.id.substring(6))
+            }
+        });
+
+//        var posting = $.post("updateDrawerView.php", {drawerId: id});
+//        posting.success(function(data) {
+//            $("#drawer" + id + " .drawerInfo").replaceWith($.parseJSON(data).drawerInfo);
+//            $("#drawer" + id + " .content").replaceWith($.parseJSON(data).content);
+//        });
+    }
 
     $("#saveEditDrawerDataForm").click(function() {
         // validate all necessary fields - if everything ok.. submit
@@ -220,6 +171,7 @@ $(document).ready(function() {
             }
         });
 
+        // everything is OK - submit
         if(errorCount == 0) {
             console.log("No errors, we can submit.");
             var contentRowData = [];
@@ -241,16 +193,11 @@ $(document).ready(function() {
             dataObj.contentData = contentRowData;
             dataObj.contentDelete = contentRowsToBeDeleted;
 
-            //console.log("drawerId is: " + $("#getDrawerId").val() );
-
-
             var posting = $.post("saveDrawerData.php", dataObj);
             posting.success(function(data) {
                 if(data.indexOf("saveSuccessful") < 0) {
                     // display message what went wrong
                     console.log("save failed");
-
-
                 } else {
                     // if saving data to db was successful close form and update current drawer data view
                     console.log("drawerId: " + drawerId);
@@ -261,14 +208,6 @@ $(document).ready(function() {
                 console.log("done data: " + data.indexOf("saveSuccessful"));
                 console.log("done data: " + data);
             });
-
-//            $("#addEditDrawerForm").submit();
-
-            // for submit call ajax - save data php
-            // if enerything went ok - we return OK, success...
-            // if success close colorbox
-            // if error display message
-
         }
     });
 
@@ -277,8 +216,14 @@ $(document).ready(function() {
         console.log("hax max leng: " + hasMaxLength($("#drawerName").val(), 8));
         console.log("hax MIN leng: " + hasMinLength($("#drawerName").val(), 3));
         console.log("in num betw: " + isNumberBetween($("#drawerName").val(), 3 , 25));
-        //parent.$.colorbox.close();
+        //window.parent.calledFromIframe("Canceled");
+        //parent.jQuery.colorbox.close("noooooooooooooooooooooooooo");
+        parent.jQuery.colorbox.close("noooooooooooooooooooooooooo");
     });
+
+    function calledFromIframe(typeOfClose) {
+        console.log(typeOfClose);
+    }
 
 //*************************** Validation Functions ***************************\\
 
@@ -306,3 +251,66 @@ $(document).ready(function() {
 
 
 });
+
+//************************ Probably unused functions ***************************\\
+
+function disableButtons() {
+    $("#addNewDrawerBtn, .editDrawerDataBtn").off("click");
+    $(".deleteDrawerBtn").off("click");
+}
+
+function enableButtons() {
+    $("#addNewDrawerBtn, .editDrawerDataBtn").click(showAddEditWindow);
+    $(".deleteDrawerBtn").click(deleteDrawer);
+}
+
+//$("#saveDrawerData").click(saveDrawerData);
+function saveDrawerData() {
+    console.log(drawerId + " drawer id");
+    var ajaxRequest = $.ajax({
+        type: "POST",
+        url: "saveDrawerData.php",
+        data: {
+            saveData: true,
+            drawerID: drawerId,
+            deleteContent: contentRowsToBeDeleted
+        },
+        dataType: "html"
+    });
+    ajaxRequest.done(function(data) {
+        updateDrawerDisplay(data);
+    });
+}
+
+
+function handleDrawerData(data){
+    $("#drawerName").val(data.info.Name);
+    $("#drawerDescription").val(data.info.Description);
+    if(data.content.length > 0) {
+        $.each(data.content, function(i, value) {
+            addNewContentRow(value.ContentID, value.Description, value.Amount, value.Quantity);
+            //console.log(value.Description);
+        });
+    } else if(data.content.length == 0) {
+        addNewContentRow();
+    }
+}
+
+$("#cancelDrawerDataBtn").click(cleanupAfterCancel);
+function cleanupAfterCancel() {
+
+    //console.log(contentRowsToBeDeleted);
+    //console.log(contentRowsToBeDeleted.length);
+
+    $(".contentRowStyle").remove();
+    $("#addEditDrawer").toggleClass("hiddenElement");
+
+    $("#drawerName").val("");
+    $("#drawerDescription").val("");
+
+    contentRowNumber = 0;
+    contentRowsToBeDeleted = [];
+    drawerId = null;
+
+    enableButtons();
+}

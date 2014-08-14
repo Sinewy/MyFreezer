@@ -24,6 +24,12 @@ if(isset($_GET["fid"])) {
 ?>
 
 <?php include("includes/header.php"); ?>
+	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" charset="utf-8" />
+	<script src="js/jquery.colorbox.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/freezerDetail.js"></script>
+<?php include("includes/header2.php"); ?>
+
 <?php echo formErrors($errors); ?>
 <?php echo displayMessage(); ?>
 
@@ -86,6 +92,17 @@ if(isset($_GET["fid"])) {
 //			?>
 <!--		</pre>-->
 <!--	</div>-->
+
+<!---->
+<!--	<h2 class="demoHeaders">Dialog</h2>-->
+<!--	<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Dialog</a></p>-->
+
+	<!-- ui-dialog -->
+	<div id="deleteDrawerDialog" title="Warning!">
+		<p>Drawer you are trying to delete still contains some content.<br />
+		Are you sure you want to delete this drawer and all of its containing content?</p>
+	</div>
+
 
 <?php
 //	echo "*********************";
