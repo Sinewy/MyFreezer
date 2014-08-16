@@ -73,7 +73,7 @@ function confirmLoggedIn() {
 
 function confirmLoggedInOnIndex() {
 	if (loggedIn()) {
-		redirectTo("mainFridgeArea.php");
+		redirectTo("mainDashboard.php");
 	}
 }
 

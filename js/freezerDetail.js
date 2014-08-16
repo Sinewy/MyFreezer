@@ -108,11 +108,6 @@ $(document).ready(function() {
             console.log("the drawer NOT empty");
 
         }
-        //emptyDrawer
-        //var posting = $.post("deleteDrawerFromFreezer.php", {drawerId: id});
-        //posting.success(function(data) {
-        //    $("#drawer" + id).remove();
-        //});
         console.log(this.name);
     }
 
