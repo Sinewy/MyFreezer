@@ -79,6 +79,10 @@ $(document).ready(function() {
             var postForDrawer = $.post("getDataForMissingDrawer.php", {drawerId: missingId});
             postForDrawer.success(function(data) {
                 console.log("data from get missing data:" + data);
+                if($("#noDrawersYet").length) {
+                    console.log("no drawer yet exists")
+                    $("#noDrawersYet").remove();
+                }
                 $(".drawers").append(data);
                 $("#drawer" + missingId + " .editDrawerDataBtn").click(function() {
                     prepareForShowForm(this);
@@ -101,6 +105,10 @@ $(document).ready(function() {
             var posting = $.post("deleteDrawerFromFreezer.php", {drawerId: id});
             posting.success(function(data) {
                 $("#drawer" + id).remove();
+                if($("[id^='drawer']").length == 0) {
+                    var noDrawerYet = "<p id='noDrawersYet'>There are no drawers in this freezer yet. Please add them.</p>";
+                    $(".drawers").append(noDrawerYet);
+                }
             });
         } else {
             $("#deleteDrawerDialog").data("dId", id);
@@ -123,6 +131,10 @@ $(document).ready(function() {
                     var posting = $.post("deleteDrawerFromFreezer.php", {drawerId: dId});
                     posting.success(function(data) {
                         $("#drawer" + dId).remove();
+                        if($("[id^='drawer']").length == 0) {
+                            var noDrawerYet = "<p id='noDrawersYet'>There are no drawers in this freezer yet. Please add them.</p>";
+                            $(".drawers").append(noDrawerYet);
+                        }
                     });
                     $(this).dialog("close");
                 }

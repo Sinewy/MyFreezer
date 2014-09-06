@@ -6,13 +6,13 @@
 <?php
 $pageTitle = "Getting missing drawer For Display";
 //$userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
-//$freezerId = isset($_SESSION["FreezerID"]) ? $_SESSION["FreezerID"] : null;
+$freezerId = isset($_SESSION["FreezerID"]) ? $_SESSION["FreezerID"] : null;
 
 if(isset($_POST["existingDrawers"])) {
 	$displayedDrawers = $_POST["existingDrawers"];
 	$dbDrawers = [];
-	$drawerData = findAllDrawersForFreezer(7);
-	//$drawerData = findAllDrawersForFreezer($freezerId);
+	$drawerData = findAllDrawersForFreezer($freezerId);
+	//$drawerData = findAllDrawersForFreezer(7);
 	if(mysqli_num_rows($drawerData) > 0) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
 			$dbDrawers[] = $drawer["DrawerID"];
@@ -24,6 +24,7 @@ if(isset($_POST["existingDrawers"])) {
 	foreach($result as $val) {
 		$theOne = $val;
 	}
+
 //
 //	for($i = 0; $i < count($dbDrawers); $i++) {
 //		for($j = 0; $j < count($displayedDrawers); $j++) {
@@ -42,8 +43,8 @@ if(isset($_POST["existingDrawers"])) {
 //		}
 //	}
 
-
-
-	//echo $result;
 	echo json_encode($theOne);
+} else {
+	$drawerData = findAllDrawersForFreezerFirstOne($freezerId);
+	echo json_encode($drawerData["DrawerID"]);
 }

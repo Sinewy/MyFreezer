@@ -21,7 +21,7 @@ if(isset($_POST["saveData"])) {
 
 	if(strstr($drawerId, "noId")) {
 		//insert new drawer and return new drawerId, content comes later
-		$drawerId = insertNewDrawerData(7, $drawerName, $drawerDescription);
+		$drawerId = insertNewDrawerData($freezerId, $drawerName, $drawerDescription);
 	} else {
 		//update drawer data only, content comes later
 		updateDrawerDataForId($drawerId, $drawerName, $drawerDescription);

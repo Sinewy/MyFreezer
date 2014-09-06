@@ -200,6 +200,21 @@ function findAllDrawersForFreezer($freezerId) {
 	return $result;
 }
 
+function findAllDrawersForFreezerFirstOne($freezerId) {
+	global $dbc;
+	$query  = "SELECT * ";
+	$query .= "FROM drawer ";
+	$query .= "WHERE FreezerID = {$freezerId} ";
+	$query .= "LIMIT 1 ";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	if($drawerData = mysqli_fetch_assoc($result)) {
+		return $drawerData;
+	} else {
+		return null;
+	}
+}
+
 function insertNewDrawerData($freezerId, $drawerName, $drawerDescription) {
 	global $dbc;
 	$query  = "INSERT INTO drawer ";
@@ -359,7 +374,7 @@ function createFreezerDrawerView($freezerId) {
 			$output .= "</div>";
 		}
 	} else {
-		$output .= "<p>There are no drawers in this freezer yet. Please add them.</p>";
+		$output .= "<p id='noDrawersYet'>There are no drawers in this freezer yet. Please add them.</p>";
 	}
 	$output .= "</div><br />";
 	return $output;

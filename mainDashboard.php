@@ -5,7 +5,7 @@
 <?php confirmLoggedIn(); ?>
 
 <?php
-$_SESSION["freezerID"] = null;
+$_SESSION["FreezerID"] = null;
 $pageTitle = "Main Dashboard";
 $userId = $_SESSION["UserID"];
 $freezersOutput = "";

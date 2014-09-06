@@ -9,6 +9,9 @@ $pageTitle = "Manage Ffeezer drawers and its content";
 $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if(isset($_GET["fid"])) {
+
+	$_SESSION["FreezerID"] = $_GET["fid"];
+
 	$freezerId = makeSqlSafe($_GET["fid"]);
 	$freezerData = findFreezerByIdAndUserId($freezerId, $userId);
 	//TODO - check if not null than do this
@@ -48,6 +51,12 @@ if(isset($_GET["fid"])) {
 	<div id="deleteDrawerDialog" title="Warning!">
 		<p>Drawer you are trying to delete still contains some content.<br />
 			Are you sure you want to delete this drawer and all of its containing content?</p>
+	</div>
+
+	<div>
+		<pre>
+			<?php print_r($_SESSION); ?>
+		</pre>
 	</div>
 
 <?php include("includes/footer.php"); ?>
