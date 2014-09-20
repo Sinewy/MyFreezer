@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f270e25-2ef6-4317-937f-7016bd8275d1" name="Default" comment="Saving data to DB - delete&#10;Updating drawer view">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/addOrEditDrawerData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deleteDrawerFromFreezer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/freezerDetail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDataForMissingDrawer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getMissingDrawerForDisplay.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/header2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/validationFunctions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addOrEditDrawerData.php" afterPath="$PROJECT_DIR$/addOrEditDrawerData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freezerDetail.php" afterPath="$PROJECT_DIR$/freezerDetail.php" />
+    <list default="true" id="2f270e25-2ef6-4317-937f-7016bd8275d1" name="Default" comment="Delete drawer - warning if drawer not empty.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deleteSelectedFreezer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDataForMissingFreezer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getMissingFreezerForDisplay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/isFreezerEmpty.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mainDashboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainDashboardV1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modifyFreezer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modifyFreezerV1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saveFreezerData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/updateFreezerView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/freezerDetail.js" afterPath="$PROJECT_DIR$/js/freezerDetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalFunctions.php" afterPath="$PROJECT_DIR$/globalFunctions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainScript.js" afterPath="$PROJECT_DIR$/js/mainScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saveDrawerData.php" afterPath="$PROJECT_DIR$/saveDrawerData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainDashboard.php" afterPath="$PROJECT_DIR$/mainDashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mainStyles.css" afterPath="$PROJECT_DIR$/css/mainStyles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modifyFreezer.php" afterPath="$PROJECT_DIR$/modifyFreezer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyFridge.iws" />
@@ -42,21 +30,21 @@
     <file path="/activate.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404983037636" ignored="false" />
     <file path="/index.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404983166276" ignored="false" />
     <file path="/showFreezers.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1404985070341" ignored="false" />
-    <file path="/mainDashboard.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405112860027" ignored="false" />
+    <file path="/mainDashboard.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410284397631" ignored="false" />
     <file path="/header.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406565856549" ignored="false" />
     <file path="/deleteFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405030572553" ignored="false" />
-    <file path="/modifyFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405889027172" ignored="false" />
-    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1408048774793" ignored="false" />
-    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1408050010361" ignored="false" />
-    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..drawer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406189693930" ignored="false" />
+    <file path="/modifyFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410117608207" ignored="false" />
+    <file path="/globalFunctions.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1411238078933" ignored="false" />
+    <file path="/freezerDetail.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1409419079425" ignored="false" />
+    <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..drawer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1409420233180" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..freezer" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405115373117" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..age" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885296583" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..content" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406650597474" ignored="false" />
-    <file path="/myFridge DB" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406818710823" ignored="false" />
+    <file path="/myFridge DB" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1408093195634" ignored="false" />
     <file path="/dummy.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/a.sql" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405118877158" ignored="false" />
     <file path="/README.md" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405189217646" ignored="false" />
-    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1408049047461" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410710193373" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..gender" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406050583963" ignored="false" />
     <file path="dbtable:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/myfridge..user" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1405885275822" ignored="false" />
     <file path="/mainScript.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406802682530" ignored="false" />
@@ -67,11 +55,21 @@
     <file path="/testIframePost.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406566059838" ignored="false" />
     <file path="/addOrEditDrawerData.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406804093324" ignored="false" />
     <file path="/updateDrawerView.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406758435902" ignored="false" />
-    <file path="/freezerDetail.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1408050194875" ignored="false" />
+    <file path="/freezerDetail.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410799992191" ignored="false" />
     <file path="/addOrEditDrawerData.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406805031732" ignored="false" />
     <file path="/deleteDrawerFromFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406807737271" ignored="false" />
-    <file path="/getMissingDrawerForDisplay.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406814153451" ignored="false" />
+    <file path="/getMissingDrawerForDisplay.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410023933308" ignored="false" />
     <file path="/getDataForMissingDrawer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1406815175477" ignored="false" />
+    <file path="/.gitignore" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1409771678919" ignored="false" />
+    <file path="/mainDashboard.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1411237848988" ignored="false" />
+    <file path="/modifyFreezer.js" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410280130836" ignored="false" />
+    <file path="/a.dummy" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1411236977708" ignored="false" />
+    <file path="/saveFreezerData.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410279621068" ignored="false" />
+    <file path="/isFreezerEmpty.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410281673925" ignored="false" />
+    <file path="/deleteSelectedFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410284089751" ignored="false" />
+    <file path="/updateFreezerView.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1410286840650" ignored="false" />
+    <file path="/getMissingFreezerForDisplay.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1411236903611" ignored="false" />
+    <file path="/getDataForMissingFreezer.php" changelist="2f270e25-2ef6-4317-937f-7016bd8275d1" time="1411238192987" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,87 +138,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="mainDashboard.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainDashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="31" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainDashboard.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mainDashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="125" selection-start="4136" selection-end="4194" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getMissingDrawerForDisplay.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getMissingDrawerForDisplay.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="42" selection-start="555" selection-end="593" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getMissingFreezerForDisplay.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getMissingFreezerForDisplay.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="freezerDetail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freezerDetail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="30" selection-start="745" selection-end="745" vertical-scroll-proportion="-9.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteDrawerFromFreezer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deleteDrawerFromFreezer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="390" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isFreezerEmpty.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/isFreezerEmpty.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="37" selection-start="295" selection-end="328" vertical-scroll-proportion="-7.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteFreezer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deleteFreezer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteSelectedFreezer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deleteSelectedFreezer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="2" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="freezerDetail.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/freezerDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="68" selection-start="4426" selection-end="4426" vertical-scroll-proportion="0.0">
+            <state line="82" column="55" selection-start="2928" selection-end="2960" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="freezerDetail.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/freezerDetail.php">
+      <file leaf-file-name="getDataForMissingDrawer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getDataForMissingDrawer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="20" selection-start="3112" selection-end="3112" vertical-scroll-proportion="0.36335877">
-              <folding>
-                <element signature="e#3129#3149#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/jquery-ui-1.11.1.custom/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="0" selection-start="5955" selection-end="6260" vertical-scroll-proportion="-7.0588236">
-              <folding>
-                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addOrEditDrawerData.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/addOrEditDrawerData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="44" selection-start="3848" selection-end="4212" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#237#314#0" expanded="false" />
-                <element signature="e#350#1948#0" expanded="false" />
-                <element signature="e#2044#2458#0" expanded="false" />
-                <marker date="1406805160198" expanded="true" signature="29:5885" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addOrEditDrawerData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addOrEditDrawerData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="25" selection-start="1378" selection-end="1378" vertical-scroll-proportion="-32.03846">
+            <state line="12" column="25" selection-start="432" selection-end="432" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveDrawerData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saveDrawerData.php">
+      <file leaf-file-name="getDataForMissingFreezer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getDataForMissingFreezer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="129" selection-start="1442" selection-end="1559" vertical-scroll-proportion="-16.346153">
-              <folding>
-                <marker date="1406818013929" expanded="true" signature="1229:1395" placeholder="..." />
-                <marker date="1406818013929" expanded="true" signature="1403:1562" placeholder="..." />
-              </folding>
+            <state line="3" column="47" selection-start="165" selection-end="165" vertical-scroll-proportion="-1.9615384">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalFunctions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="globalFunctions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/globalFunctions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="36" selection-start="8405" selection-end="8432" vertical-scroll-proportion="-2.72549">
+            <state line="396" column="32" selection-start="11335" selection-end="11335" vertical-scroll-proportion="0.67974883">
               <folding>
-                <marker date="1408048801751" expanded="true" signature="8512:9863" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="8512:9863" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="10017:10440" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="11314:11820" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="11337:11798" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="11514:11667" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="12345:13055" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="12472:12695" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="12822:13049" placeholder="..." />
-                <marker date="1408048801751" expanded="true" signature="13193:13476" placeholder="..." />
+                <element signature="n#createEditDrawerContentView#0;n#!!top" expanded="false" />
+                <marker date="1411238519530" expanded="true" signature="12552:13903" placeholder="..." />
+                <marker date="1411238519530" expanded="false" signature="14057:14478" placeholder="..." />
+                <marker date="1411238519530" expanded="false" signature="15368:15874" placeholder="..." />
+                <marker date="1411238519530" expanded="false" signature="15368:15766" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -252,22 +287,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/updateDrawerView.php" />
-        <option value="$PROJECT_DIR$/js/mainScript.js" />
-        <option value="$PROJECT_DIR$/js/editDrawerForm.js" />
-        <option value="$PROJECT_DIR$/js/validationFunctions.js" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/includes/header2.php" />
-        <option value="$PROJECT_DIR$/addOrEditDrawerData.php" />
-        <option value="$PROJECT_DIR$/js/addOrEditDrawerData.js" />
-        <option value="$PROJECT_DIR$/deleteDrawerFromFreezer.php" />
-        <option value="$PROJECT_DIR$/getMissingDrawerForDisplay.php" />
-        <option value="$PROJECT_DIR$/getDataForMissingDrawer.php" />
-        <option value="$PROJECT_DIR$/saveDrawerData.php" />
         <option value="db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/" />
-        <option value="$PROJECT_DIR$/globalFunctions.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/css/mainStyles.css" />
+        <option value="$PROJECT_DIR$/modifyFreezer.php" />
+        <option value="$PROJECT_DIR$/js/modifyFreezer.js" />
+        <option value="$PROJECT_DIR$/saveFreezerData.php" />
+        <option value="$PROJECT_DIR$/isFreezerEmpty.php" />
+        <option value="$PROJECT_DIR$/deleteSelectedFreezer.php" />
+        <option value="$PROJECT_DIR$/mainDashboard.php" />
+        <option value="$PROJECT_DIR$/updateFreezerView.php" />
         <option value="$PROJECT_DIR$/js/freezerDetail.js" />
-        <option value="$PROJECT_DIR$/freezerDetail.php" />
+        <option value="$PROJECT_DIR$/getMissingDrawerForDisplay.php" />
+        <option value="$PROJECT_DIR$/getMissingFreezerForDisplay.php" />
+        <option value="$PROJECT_DIR$/js/mainDashboard.js" />
+        <option value="$PROJECT_DIR$/getDataForMissingFreezer.php" />
+        <option value="$PROJECT_DIR$/globalFunctions.php" />
       </list>
     </option>
   </component>
@@ -309,6 +344,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,39 +387,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyFridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myfridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyFridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myfridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,26 +419,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-1.11.1.custom" />
+              <option name="myItemId" value="design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="275" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="292" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="299" />
@@ -451,19 +454,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -478,10 +481,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\myfridge" />
       <recent name="C:\wamp\www\myfridge\css" />
       <recent name="C:\wamp\www\myfridge\js" />
       <recent name="C:\wamp\www\myfridge\includes" />
-      <recent name="C:\wamp\www\myfridge" />
       <recent name="C:\wamp\www\myfridge\" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -509,19 +512,6 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -552,6 +542,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -565,9 +568,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -589,6 +589,9 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -676,7 +679,19 @@
       <created>1406758814439</created>
       <updated>1406758814439</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Delete drawer - warning if drawer not empty.">
+      <created>1408053024916</created>
+      <updated>1408053024916</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added PS - Design and DB export">
+      <created>1408211934787</created>
+      <updated>1408211934787</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Corrected functionality when adding the first drawer to freezer and removing the last drawer from freezer.">
+      <created>1410025526490</created>
+      <updated>1410025526490</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -701,14 +716,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.49573106" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23374176" sideWeight="0.48719317" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33238906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.66761094" order="3" side_tool="false" content_ui="tabs" x="1297" y="175" width="275" height="614" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14674494" sideWeight="0.67200756" order="3" side_tool="false" content_ui="tabs" x="1297" y="175" width="275" height="614" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6713881" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6713881" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -717,19 +731,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15795091" sideWeight="0.21907459" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15795091" sideWeight="0.21907459" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.66761094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15795091" sideWeight="0.66918004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286119" sideWeight="0.49573106" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -771,7 +786,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving data to DB - delete&#10;Updating drawer view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected functionality when adding the first drawer to freezer and removing the last drawer from freezer." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -790,10 +805,13 @@
     <MESSAGE value="popup form - different way - unfinished" />
     <MESSAGE value="Add/Edit Drawer data Poup - before DB handling" />
     <MESSAGE value="Saving data to DB - delete&#10;Updating drawer view" />
+    <MESSAGE value="Delete drawer - warning if drawer not empty." />
+    <MESSAGE value="Added PS - Design and DB export" />
+    <MESSAGE value="Corrected functionality when adding the first drawer to freezer and removing the last drawer from freezer." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -801,152 +819,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/getMissingDrawerForDisplay.php">
+    <entry file="file://$PROJECT_DIR$/deleteDrawerFromFreezer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="23" selection-start="0" selection-end="1214" vertical-scroll-proportion="-15.692307">
+        <state line="0" column="0" selection-start="0" selection-end="390" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getDataForMissingDrawer.php">
+    <entry file="file://$PROJECT_DIR$/deleteSelectedFreezer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="463" selection-end="463" vertical-scroll-proportion="-8.5">
+        <state line="16" column="2" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/addOrEditDrawerData.js">
+    <entry file="file://$PROJECT_DIR$/mainDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="44" selection-start="3848" selection-end="4212" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#237#314#0" expanded="false" />
-            <element signature="e#350#1948#0" expanded="false" />
-            <element signature="e#2044#2458#0" expanded="false" />
-            <marker date="1406805160198" expanded="true" signature="29:5885" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/2eff24a0/953c57b3-c4e0-450b-a6ee-a9cb949bba03/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="0" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="0" expanded="true" signature="-1:-1" placeholder="select * fro..content..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saveDrawerData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="129" selection-start="1442" selection-end="1559" vertical-scroll-proportion="-16.346153">
-          <folding>
-            <marker date="1406818013929" expanded="true" signature="1229:1395" placeholder="..." />
-            <marker date="1406818013929" expanded="true" signature="1403:1562" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/jquery-ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="41" column="31" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/jquery-ui-1.11.1.custom/jquery-ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.53125">
-          <folding>
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/jquery-ui-1.11.1.custom/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1407975132000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="87" selection-start="221" selection-end="304" vertical-scroll-proportion="0.1289833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+    <entry file="file://$PROJECT_DIR$/assets/design/freezerDetailV05.psd">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/jquery-ui-1.11.1.custom/index.html">
+    <entry file="file://$PROJECT_DIR$/updateFreezerView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="0" selection-start="5955" selection-end="6260" vertical-scroll-proportion="-7.0588236">
-          <folding>
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/globalFunctions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="36" selection-start="8405" selection-end="8432" vertical-scroll-proportion="-2.72549">
-          <folding>
-            <marker date="1408048801751" expanded="true" signature="8512:9863" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="8512:9863" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="10017:10440" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="11314:11820" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="11337:11798" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="11514:11667" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="12345:13055" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="12472:12695" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="12822:13049" placeholder="..." />
-            <marker date="1408048801751" expanded="true" signature="13193:13476" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addOrEditDrawerData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="25" selection-start="1378" selection-end="1378" vertical-scroll-proportion="-32.03846">
+        <state line="16" column="1" selection-start="687" selection-end="687" vertical-scroll-proportion="0.42834646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/freezerDetail.js">
+    <entry file="file://$PROJECT_DIR$/updateDrawerView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="68" selection-start="4426" selection-end="4426" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteFreezer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freezerDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="20" selection-start="3112" selection-end="3112" vertical-scroll-proportion="0.36335877">
+        <state line="22" column="30" selection-start="745" selection-end="745" vertical-scroll-proportion="-9.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/freezerDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="55" selection-start="2928" selection-end="2960" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isFreezerEmpty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="295" selection-end="328" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getMissingDrawerForDisplay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="555" selection-end="593" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getMissingFreezerForDisplay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getDataForMissingDrawer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="25" selection-start="432" selection-end="432" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getDataForMissingFreezer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="47" selection-start="165" selection-end="165" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mainDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="125" selection-start="4136" selection-end="4194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/globalFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="32" selection-start="11335" selection-end="11335" vertical-scroll-proportion="0.67974883">
           <folding>
-            <element signature="e#3129#3149#0" expanded="true" />
+            <element signature="n#createEditDrawerContentView#0;n#!!top" expanded="false" />
+            <marker date="1411238519530" expanded="true" signature="12552:13903" placeholder="..." />
+            <marker date="1411238519530" expanded="false" signature="14057:14478" placeholder="..." />
+            <marker date="1411238519530" expanded="false" signature="15368:15874" placeholder="..." />
+            <marker date="1411238519530" expanded="false" signature="15368:15766" placeholder="..." />
           </folding>
         </state>
       </provider>

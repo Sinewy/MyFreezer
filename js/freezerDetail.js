@@ -84,6 +84,7 @@ $(document).ready(function() {
                     $("#noDrawersYet").remove();
                 }
                 $(".drawers").append(data);
+                console.log("adding edit click to missing id: " + missingId);
                 $("#drawer" + missingId + " .editDrawerDataBtn").click(function() {
                     prepareForShowForm(this);
                 });

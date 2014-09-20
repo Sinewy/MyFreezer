@@ -137,6 +137,31 @@ function getRegistrationDropdownOptionsFor($dbTable, $columnName, $selected) {
 	return $dropDownOptions;
 }
 
+function findAllFreezersForUserId($userId) {
+	global $dbc;
+	$query  = "SELECT * ";
+	$query .= "FROM freezer ";
+	$query .= "WHERE UserID = '{$userId}' ";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	return $result;
+}
+
+function findAllFreezersForUserIdFirstOne($userId) {
+	global $dbc;
+	$query  = "SELECT * ";
+	$query .= "FROM freezer ";
+	$query .= "WHERE UserID = '{$userId}' ";
+	$query .= "LIMIT 1 ";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	if($freezerData = mysqli_fetch_assoc($result)) {
+		return $freezerData;
+	} else {
+		return null;
+	}
+}
+
 function findFreezerByIdAndUserId($freezerId, $userId) {
 	global $dbc;
 	$query  = "SELECT * ";
@@ -188,6 +213,17 @@ function  insertNewFreezerDataForUserId($userId, $freezerName, $freezerDescripti
 		// Failure
 		return null;
 	}
+}
+
+function deleteFreezerById($freezerId) {
+	global $dbc;
+	$query  = "DELETE ";
+	$query .= "FROM freezer ";
+	$query .= "WHERE FreezerID = {$freezerId} ";
+	$query .= "LIMIT 1";
+	$result = mysqli_query($dbc, $query);
+	confirmQuery($result);
+	return $result;
 }
 
 function findAllDrawersForFreezer($freezerId) {
@@ -321,7 +357,6 @@ function updateContentRowById($cId, $cDescription, $cAmount, $cQty, $cDate) {
 	}
 }
 
-
 function deleteContentById($contentId) {
 	global $dbc;
 	$query  = "DELETE ";
@@ -335,6 +370,59 @@ function deleteContentById($contentId) {
 //******************* Database Query Functions END *********************\\
 
 //******************* Layout Functions ***********************\\
+
+function createMainDashboardView($userId) {
+	$freezerData = findAllFreezersForUserId($userId);
+	$output = "";
+	if(mysqli_num_rows($freezerData) > 0) {
+		while($freezer = mysqli_fetch_assoc($freezerData)) {
+			$output .= "<div class=\"freezerBox\" id=\"freezer" . $freezer["FreezerID"] . "\">";
+			$output .= addEditDeleteButtonsJS("Freezer", $freezer["FreezerID"]);
+//			$output .= "<div class=\"modifyBox\">";
+//			$output .= "<form enctype=\"multipart/form-data\" action=\"modifyFreezer.php\" method=\"POST\" class=\"fakeForm\">";
+//			$output .= "<input type=\"hidden\" name=\"FreezerID\" value=\"" . $freezer["FreezerID"] . "\"/>";
+//			$output .= "<input type=\"submit\" name=\"btnPressed\" value=\"Edit\" />";
+//			$output .= "</form>";
+//			$output .= "<form enctype=\"multipart/form-data\" action=\"deleteFreezer.php\" method=\"POST\" class=\"fakeForm\">";
+//			$output .= "<input type=\"hidden\" name=\"FreezerID\" value=\"" . $freezer["FreezerID"] . "\"/>";
+//			$output .= "<input type=\"submit\" name=\"btnPressed\" value=\"Delete\" />";
+//			$output .= "</form>";
+			$output .= "<a href=\"freezerDetail.php?fid=" . $freezer["FreezerID"] . "\">";
+			$output .= createFreezerData($freezer["Name"], $freezer["Description"], $freezer["Location"], $freezer["Make"]);
+//			$output .= "<div class=\"freezerData\">";
+//			$output .= "<p>" . htmlentities($freezer["Name"]) . "</p>";
+//			if(hasPresence($freezer["Description"])) { $output .=  "<p>" . htmlentities($freezer["Description"]) . "</p>";}
+//			if(hasPresence($freezer["Location"])) { $output .=  "<p>" . htmlentities($freezer["Location"]) . "</p>";}
+//			if(hasPresence($freezer["Make"])) { $output .=  "<p>" . htmlentities($freezer["Make"]) . "</p>";}
+//			$output .= "</div>";
+			$output .= "</a></div>";
+		}
+	} else {
+		$output = "<p id='noFreezersYet'>There are no freezers in your system yet. Please add them.</p>";
+	}
+	return $output;
+}
+
+function createFreezerData($name, $desc, $loc, $make){
+	$output = "";
+	$output .= "<div class=\"freezerData\">";
+	$output .= "<p>" . htmlentities($name) . "</p>";
+	if(hasPresence($desc)) { $output .=  "<p>" . htmlentities($desc) . "</p>";}
+	if(hasPresence($loc)) { $output .=  "<p>" . htmlentities($loc) . "</p>";}
+	if(hasPresence($make)) { $output .=  "<p>" . htmlentities($make) . "</p>";}
+	$output .= "</div>";
+	return $output;
+}
+
+function createFreezer($freezerId, $userId) {
+	$freezer =  findFreezerByIdAndUserId($freezerId, $userId);
+	$output = "<div class=\"freezerBox\" id=\"freezer" . $freezer["FreezerID"] . "\">";
+	$output .= addEditDeleteButtonsJS("Freezer", $freezer["FreezerID"]);
+	$output .= "<a href=\"freezerDetail.php?fid=" . $freezer["FreezerID"] . "\">";
+	$output .= createFreezerData($freezer["Name"], $freezer["Description"], $freezer["Location"], $freezer["Make"]);
+	$output .= "</a></div>";
+	return $output;
+}
 
 function createEditDrawerContentView($drawerId) {
 	$allContent = findAllContentForDrawer($drawerId);
@@ -369,7 +457,7 @@ function createFreezerDrawerView($freezerId) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
 			$output .= "<div class=\"drawer\" id=\"drawer" . $drawer["DrawerID"] . "\">";
 			$output .= createDrawerInfo($drawer["DrawerID"], $drawer["Name"], $drawer["Description"]);
-			$output .= addEditDeleteButtonsJS("DrawerID", $drawer["DrawerID"]);
+			$output .= addEditDeleteButtonsJS("Drawer", $drawer["DrawerID"]);
 			$output .= createDrawerContentView($drawer["DrawerID"]);
 			$output .= "</div>";
 		}
@@ -384,7 +472,7 @@ function createDrawer($dId) {
 	$dData = findDrawerByDrawerId($dId);
 	$output = "<div class=\"drawer\" id=\"drawer" . $dId . "\">";
 	$output .= createDrawerInfo($dId, $dData["Name"], $dData["Description"]);
-	$output .= addEditDeleteButtonsJS("DrawerID", $dId);
+	$output .= addEditDeleteButtonsJS("Drawer", $dId);
 	$output .= createDrawerContentView($dId);
 	$output .= "</div>";
 	return $output;
@@ -441,8 +529,8 @@ function createDrawerContentView($drawerId) {
 
 function addEditDeleteButtonsJS($elementName, $elementId) {
 	$buttonsOutput = "<div class=\"modifyBox\">";
-	$buttonsOutput .= "<input class=\"editDrawerDataBtn\" type=\"button\" name=\"editBtn" . $elementId . "\" value=\"Edit\" />";
-	$buttonsOutput .= "<input class=\"deleteDrawerBtn\" type=\"button\" name=\"deleteBtn" . $elementId . "\" value=\"Delete\" />";
+	$buttonsOutput .= "<input class=\"edit" . $elementName . "DataBtn\" type=\"button\" name=\"editBtn" . $elementId . "\" value=\"Edit\" />";
+	$buttonsOutput .= "<input class=\"delete" . $elementName . "Btn\" type=\"button\" name=\"deleteBtn" . $elementId . "\" value=\"Delete\" />";
 	$buttonsOutput .= "</div>";
 	return $buttonsOutput;
 }
