@@ -12,12 +12,12 @@ $userId = $_SESSION["UserID"];
 
 ?>
 
-<?php include("includes/header.php"); ?>
+<?php include("includes/head.php"); ?>
 <link rel="stylesheet" href="css/jquery-ui.css" type="text/css" charset="utf-8" />
 <script src="js/jquery.colorbox.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/mainDashboard.js"></script>
-<?php include("includes/header2.php"); ?>
+<?php include("includes/headPart2.php"); ?>
 
 
 <?php echo displayMessage(); ?>

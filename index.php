@@ -25,9 +25,6 @@
     		} else {
       			// Failure
       			$_SESSION["message"] = "Username/password not found.";
-      			//$errors["authenticUser"] = "Username and password do not match our records.<br />";
-				//$errors["authenticUser"] .= "Please check your username and password and try again.<br />";
-				//$errors["authenticUser"] .= "If you are a new user, you can register <a href=\"registerNewUser.php\">HERE</a>.";
     		}
   		}
 
@@ -57,58 +54,32 @@
 
 ?>
 
+<?php include("includes/head.php"); ?>
 <?php include("includes/header.php"); ?>
-			
-			<?php echo displayMessage(); ?>
-			<?php echo formErrors($errors); ?>
 
-			<form action="index.php" method="POST" class="loginForm">
-			  <fieldset>
-			    <legend>Please LogIn</legend>
+<section class="loginSection">
 
-			    <div>
-			    	<label for="username">Username :</label>
-			    	<input type="text" id="username" name="username" size="25" value="<?php echo htmlspecialchars($username); ?>" />
-			    </div>
-			    <div>
-			    	<label for="password">Password:</label>
-			    	<input type="password" id="password" name="password" size="25" value="" />
-			    </div>
-			    <div>
-			       	<input type="hidden" name="login" value="TRUE" />
-			    	<input type="submit" value="Login" />
-			    </div>
-
-			    <p>New user? Register <a href="registerNewUser.php">HERE.</a></p>
-
-			  </fieldset>
-			</form>
-
+	<form action="index.php" method="POST" class="loginForm">
+		<fieldset>
+			<legend>LOGIN</legend>
 			<div>
-				<pre>
-					<?php
-
-						//print_r($_POST);
-						print_r($_SESSION);
-
-					?>
-				</pre>
+				<input type="text" id="username" name="username" size="25" value="<?php echo htmlspecialchars($username); ?>" placeholder="username"/>
 			</div>
+			<div>
+				<input type="password" id="password" name="password" size="25" value="" placeholder="password" />
+			</div>
+			<div>
+				<input type="hidden" name="login" value="TRUE" />
+				<input class="button" type="submit" value="SIGN IN" />
+			</div>
+			<p><a href="registerNewUser.php">New user? Register HERE.</a></p>
+			<p><a href="#">Forgot your password?</a></p>
+		</fieldset>
+	</form>
 
-			<?php 
+	<?php echo displayMessage(); ?>
+	<?php echo formErrors($errors); ?>
 
-				$q = "SELECT * FROM user";
-	        	$result = mysqli_query($dbc, $q);
-	        	if (!$result) {
-					die("Database query failed.");
-				}
-				while($users = mysqli_fetch_assoc($result)) {
-					echo "<div>" . $users["Username"]. "</div>";
-				}
-				mysqli_free_result($result);
-
-
-				
-			?>
+</section>
 
 <?php include("includes/footer.php"); ?>

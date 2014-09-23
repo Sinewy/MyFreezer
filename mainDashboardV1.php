@@ -43,7 +43,7 @@ if(mysqli_num_rows($result) > 0) {
 
 ?>
 
-<?php include("includes/header.php"); ?>
+<?php include("includes/head.php"); ?>
 
 <?php echo displayMessage(); ?>
 

@@ -378,23 +378,8 @@ function createMainDashboardView($userId) {
 		while($freezer = mysqli_fetch_assoc($freezerData)) {
 			$output .= "<div class=\"freezerBox\" id=\"freezer" . $freezer["FreezerID"] . "\">";
 			$output .= addEditDeleteButtonsJS("Freezer", $freezer["FreezerID"]);
-//			$output .= "<div class=\"modifyBox\">";
-//			$output .= "<form enctype=\"multipart/form-data\" action=\"modifyFreezer.php\" method=\"POST\" class=\"fakeForm\">";
-//			$output .= "<input type=\"hidden\" name=\"FreezerID\" value=\"" . $freezer["FreezerID"] . "\"/>";
-//			$output .= "<input type=\"submit\" name=\"btnPressed\" value=\"Edit\" />";
-//			$output .= "</form>";
-//			$output .= "<form enctype=\"multipart/form-data\" action=\"deleteFreezer.php\" method=\"POST\" class=\"fakeForm\">";
-//			$output .= "<input type=\"hidden\" name=\"FreezerID\" value=\"" . $freezer["FreezerID"] . "\"/>";
-//			$output .= "<input type=\"submit\" name=\"btnPressed\" value=\"Delete\" />";
-//			$output .= "</form>";
 			$output .= "<a href=\"freezerDetail.php?fid=" . $freezer["FreezerID"] . "\">";
 			$output .= createFreezerData($freezer["Name"], $freezer["Description"], $freezer["Location"], $freezer["Make"]);
-//			$output .= "<div class=\"freezerData\">";
-//			$output .= "<p>" . htmlentities($freezer["Name"]) . "</p>";
-//			if(hasPresence($freezer["Description"])) { $output .=  "<p>" . htmlentities($freezer["Description"]) . "</p>";}
-//			if(hasPresence($freezer["Location"])) { $output .=  "<p>" . htmlentities($freezer["Location"]) . "</p>";}
-//			if(hasPresence($freezer["Make"])) { $output .=  "<p>" . htmlentities($freezer["Make"]) . "</p>";}
-//			$output .= "</div>";
 			$output .= "</a></div>";
 		}
 	} else {
@@ -503,29 +488,6 @@ function createDrawerContentView($drawerId) {
 	$output .= "</div>";
 	return $output;
 }
-
-//function createDrawerView($drawerId) {
-//	$output = "<div class=\"drawer\" id=\"drawer" . $drawerId . "\">";
-//	$data = findDrawerByDrawerId($drawerId);
-//	$output .= createDrawerInfo($drawerId, $data["Name"], $data["Description"]);
-//	$output .= addEditDeleteButtonsJS("DrawerID", $drawerId);
-//	$output .= createDrawerContentView($drawerId);
-//	$output .= "</div>";
-//	return $output;
-//}
-//
-//function addEditDeleteButtons($elementName, $elementId) {
-//	$buttonsOutput = "<div class=\"modifyBox\">";
-//	$buttonsOutput .= "<form enctype=\"multipart/form-data\" action=\"freezerDetail.php\" method=\"POST\" class=\"fakeForm\">";
-//	$buttonsOutput .= "<input type=\"hidden\" name=\"{$elementName}\" value=\"" . $elementId . "\"/>";
-//	$buttonsOutput .= "<input type=\"submit\" name=\"editBtnPressed\" value=\"Edit\" />";
-//	$buttonsOutput .= "</form>";
-//	$buttonsOutput .= "<form enctype=\"multipart/form-data\" action=\"freezerDetail.php\" method=\"POST\" class=\"fakeForm\">";
-//	$buttonsOutput .= "<input type=\"hidden\" name=\"{$elementName}\" value=\"" . $elementId . "\"/>";
-//	$buttonsOutput .= "<input type=\"submit\" name=\"deleteBtnPressed\" value=\"Delete\" />";
-//	$buttonsOutput .= "</form></div>";
-//	return $buttonsOutput;
-//}
 
 function addEditDeleteButtonsJS($elementName, $elementId) {
 	$buttonsOutput = "<div class=\"modifyBox\">";

@@ -83,10 +83,10 @@ if(isset($_GET["addOrEditData"])) {
 ?>
 
 
-<?php include("includes/header.php"); ?>
+<?php include("includes/head.php"); ?>
 	<script src="js/validationFunctions.js"></script>
 	<script src="js/addOrEditDrawerData.js"></script>
-<?php include("includes/header2.php"); ?>
+<?php include("includes/headPart2.php"); ?>
 
 <?php echo formErrors($errors); ?>
 <?php echo displayMessage(); ?>

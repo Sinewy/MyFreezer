@@ -112,7 +112,7 @@
 
 ?>
 
-<?php include("includes/header.php"); ?>
+<?php include("includes/head.php"); ?>
 			
 			<?php echo formErrors($errors); ?>
 
