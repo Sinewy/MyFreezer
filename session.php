@@ -5,18 +5,10 @@
 	function displayMessage() {
 		if (isset($_SESSION["message"])) {
 			$output = "<div class='message'>";
-			//$output .= htmlentities($_SESSION["message"]);
-			$output .= "<div><img src='images/messageIcon.svg'></div>";
-			$output .= "<div>";
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= $_SESSION["message"];
-			$output .= "</div>";
+			$output .= "<p><img src='images/messageIcon.svg'>Warning:</p>";
+			$output .= "<p>";
+			$output .=  htmlentities($_SESSION["message"]);
+			$output .= "</p>";
 			$output .= "</div>";
 
 			// clear message after use

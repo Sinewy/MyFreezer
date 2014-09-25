@@ -161,14 +161,24 @@ form p a {
 }
 
 .message img {
+    float: left;
+    margin-right: 10px;
     width: 25px;
     height: 25px;
-    margin-right: 10px;
 }
 
-.message div {
-    float: left;
+.message p:first-child {
+    font-size: 20px;
+    margin: 5px;
+    line-height: 25px;
+    vertical-align: middle;
 }
+
+.message p {
+    margin: 10px 10px 10px 40px;
+    font-size: 14px;
+}
+
 /*.registrationForm {*/
 /*display: block;*/
 /*}*/
