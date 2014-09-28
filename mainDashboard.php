@@ -17,8 +17,7 @@ $userId = $_SESSION["UserID"];
 <script src="js/jquery.colorbox.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/mainDashboard.js"></script>
-<?php include("includes/headPart2.php"); ?>
-
+<?php include("includes/header.php"); ?>
 
 <?php echo displayMessage(); ?>
 

@@ -18,8 +18,8 @@ function hasMinLength($value, $min) {
 function formErrors($errors=array()) {
 	$output = "";
 	if (!empty($errors)) {
-	  $output .= "<div class=\"error\">";
-	  $output .= "Please fix the following errors:";
+	  $output .= "<div class='message'>";
+	  $output .= "<p><img src='images/errorIconCircle.png'>Please fix the following errors:</p>";
 	  $output .= "<ul>";
 	  foreach ($errors as $key => $error) {
 	    $output .= "<li>{$error}</li>";
@@ -29,11 +29,6 @@ function formErrors($errors=array()) {
 	}
 	return $output;
 }
-
-
-
-
-
 
 
 // // inclusion in a set
