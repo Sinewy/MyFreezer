@@ -11,16 +11,7 @@ aside, article, section, header, footer, nav {
 }
 
 html {
-    /*background: #b8ded7;*/
-    background: rgba(208,236,224,1);
-    background: -moz-linear-gradient(-45deg, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(208,236,224,1)), color-stop(100%, rgba(136,184,181,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
-    background: linear-gradient(135deg, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0ece0', endColorstr='#88b8b5', GradientType=1 );
-
+    height: 100%;
     background: rgba(208,236,224,1);
     background: -moz-linear-gradient(left, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(208,236,224,1)), color-stop(100%, rgba(136,184,181,1)));
@@ -35,25 +26,7 @@ body {
     font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #000000;
-
-    /*background: rgba(208,236,224,1);*/
-    /*background: -moz-linear-gradient(top, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);*/
-    /*background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(208,236,224,1)), color-stop(100%, rgba(136,184,181,1)));*/
-    /*background: -webkit-linear-gradient(top, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);*/
-    /*background: -o-linear-gradient(top, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);*/
-    /*background: -ms-linear-gradient(top, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);*/
-    /*background: linear-gradient(to bottom, rgba(208,236,224,1) 0%, rgba(136,184,181,1) 100%);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0ece0', endColorstr='#88b8b5', GradientType=0 );*/
-
-    /*background: rgba(164,179,87,1);*/
-    /*background: -moz-linear-gradient(left, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);*/
-    /*background: -webkit-gradient(left top, right top, color-stop(0%, rgba(164,179,87,1)), color-stop(100%, rgba(117,137,12,1)));*/
-    /*background: -webkit-linear-gradient(left, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);*/
-    /*background: -o-linear-gradient(left, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);*/
-    /*background: -ms-linear-gradient(left, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);*/
-    /*background: linear-gradient(to right, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c', GradientType=1 );*/
-
+    height: 100%;
 }
 
 header, footer {
@@ -225,140 +198,45 @@ form p a {
     margin: 10px 0;
 }
 
-/*.registrationForm {*/
-/*display: block;*/
-/*}*/
 
-/*.registrationFormHidden {*/
-/*display: none;*/
-/*}*/
+nav {
+    width: 100%;
+    height: 45px;
+    background: #d6eff9;
+    border-bottom: solid #728889 1px;
+}
 
-/*.activationInfo {*/
-/*display: block;*/
-/*}*/
+nav:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin-top: 38px;
+    display: block;
+    position: absolute;
+    z-index: -10;
+    -webkit-box-shadow: 0px 0px 12px 4px #000000;
+    -moz-box-shadow: 0px 0px 12px 4px #000000;
+    box-shadow: 0px 0px 12px 4px #000000;
+}
 
-/*.activationInfoHidden {*/
-/*display: none;*/
-/*}*/
+nav img {
+    width: 25px;
+    height: 25px;
+    margin: 5px 8px;
+    vertical-align: middle;
+}
+nav div {
+    float: right;
+    margin: 5px 10px;
+}
+nav div:first-child {
+    float: left;
+    margin-left: 5px;
+}
 
-/*body {*/
-/*font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;*/
-/*font-size:12px;*/
-/*}*/
-
-/*.success {*/
-/*border: 1px solid;*/
-/*margin: 0 auto;*/
-/*padding:10px 5px 10px 60px;*/
-/*width:450px;*/
-/*color: #4F8A10;*/
-/*background: #DFF2BF;*/
-/*}*/
-
-/*.errormsgbox {*/
-/*border: 1px solid;*/
-/*margin: 0 auto;*/
-/*padding:10px 5px 10px 60px;*/
-/*width:450px;*/
-/*color: #D8000C;*/
-/*}*/
-
-/*.infoBox {*/
-/*background: #aec4de;*/
-/*border: 1px solid #000000;*/
-/*margin: 15px;*/
-/*}*/
-
-/*#addNewFreezerBtn {*/
-/*background: #DFF2BF;*/
-/*border: 1px solid #000000;*/
-/*}*/
-
-/*.freezerBox {*/
-/*width: 250px;*/
-/*background: #e0e0e0;*/
-/*border: 1px solid #000000;*/
-/*border-radius: 10px;*/
-/*margin: 15px;*/
-/*padding: 5px;*/
-/*float: left;*/
-/*}*/
-
-/*.fakeForm {*/
-/*float: right;*/
-/*}*/
-
-/*.freezerData {*/
-/*clear: both;*/
-/*background: #e0e0e0;*/
-/*border: 1px solid #000000;*/
-/*border-radius: 10px;*/
-
-/*}*/
-
-/*.modifyBox {*/
-/*float: right;*/
-/*}*/
-
-/*.message {*/
-/*background: #dc8b92;*/
-/*border: 1px solid #8D0D19;*/
-/*border-radius: 10px;*/
-/*margin: 15px;*/
-/*padding: 10px;*/
-/*}*/
-
-/*.testCssClass {*/
-/*background: #CCC;*/
-/*border: 1px solid #000000;*/
-/*border-radius: 10px;*/
-/*width: 300px;*/
-/*margin: auto;*/
-/*padding: 10px;*/
-/*float: left;*/
-/*}*/
-
-/*table {*/
-/*width: 400px;*/
-/*border: 1px solid black;*/
-/*background: #e0e0e0;*/
-/*padding: 5px;*/
-/*}*/
-
-/*.drawer {*/
-/*width: 400px;*/
-/*float: left;*/
-/*}*/
-
-/*.hiddenElement {*/
-/*display: none;*/
-/*}*/
-
-/*.showElement {*/
-/*display: block;*/
-/*}*/
-
-
-
-
-
-
-
-
-
-
-/*#hyperlink-style-button{*/
-/*background:none;*/
-/*border:0;*/
-/*color:#666;*/
-/*text-decoration:underline;*/
-/*}*/
-
-/*#hyperlink-style-button:hover{*/
-/*background:none;*/
-/*border:0;*/
-/*color:#666;*/
-/*text-decoration:none;*/
-/*cursor:pointer;*/
-/*cursor:hand;*/
-/*}*/
+section {
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    background: #cccccc;
+}

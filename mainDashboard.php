@@ -19,28 +19,26 @@ $userId = $_SESSION["UserID"];
 <script src="js/mainDashboard.js"></script>
 <?php include("includes/header.php"); ?>
 
-<?php echo displayMessage(); ?>
+<nav>
+	<div><a href="#"><img src="images/homeIcon.png">Home</a></div>
+	<div><a href="logout.php"><img src="images/logoutIcon.png"></a></div>
+	<div><a href="#"><img src="images/userIcon.png"><?php echo isset($_SESSION["Username"]) ? $_SESSION["Username"] : "Unknown User!!" ?></a></div>
+	<div id="addNewFreezerBtn"><a href="#"><img src="images/addIcon.png">Add New Freezer</a></div>
+</nav>
 
-<div class="infoBox">
-	This is myFridge Site.
-	<br />
-	Welcome user: <?php echo isset($_SESSION["Username"]) ? $_SESSION["Username"] : "Unknown User!!" ?>
-	<br /><br />
+<section class="freezers">
+	<?php echo createMainDashboardView($userId); ?>
+	<?php echo displayMessage(); ?>
+</section>
 
-	The best fridge tracker ever.
-	<br /><br />
-	<a href="logout.php"><button>LogOut</button></a>
-</div>
 
-<div class="mainField">
-	<div id="addNewFreezerBtn">
-		<input type="button" name="addNewFreezerBtn" value="Add New Freezer" />
-	</div>
+<!--<div class="mainField">-->
+<!---->
+<!--	<div class="freezers">-->
+<!--		--><?php //echo createMainDashboardView($userId); ?>
+<!--	</div>-->
+<!--</div>-->
 
-	<div class="freezers">
-		<?php echo createMainDashboardView($userId); ?>
-	</div>
-</div>
 
 <!-- ui-dialog -->
 <div id="deleteFreezerDialog" title="Warning!">
