@@ -11,3 +11,4 @@
 //TODO - make all querys makesqlsafe
 //TODO - display all fields as htmentities
 //TODO - make forogt passwor functionality
+//TODO - is there are more than 6 freezers - correct mainDasboardStyles

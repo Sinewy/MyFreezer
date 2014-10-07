@@ -26,8 +26,11 @@ $userId = $_SESSION["UserID"];
 	<div id="addNewFreezerBtn"><a href="#"><img src="images/addIcon.png">Add New Freezer</a></div>
 </nav>
 
-<section class="freezers">
-	<?php echo createMainDashboardView($userId); ?>
+<section class="sectionContainer">
+    <div class="freezers">
+	    <?php echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+    </div>
 	<?php echo displayMessage(); ?>
 </section>
 
