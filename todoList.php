@@ -7,3 +7,7 @@
 //TODO - make date picker show the right date format = dd/mm/yyyy
 //TODO - remove X - close BTN in colorbox
 //TODO - check all fields lengths - also check with DB - set appropriate values
+//TODO - limit all text fields
+//TODO - make all querys makesqlsafe
+//TODO - display all fields as htmentities
+//TODO - make forogt passwor functionality
