@@ -166,4 +166,19 @@ $(document).ready(function() {
         }
     );
 
+    // add clearfix to freezers and try again
+
+    var contentHeight = $(".freezers").height() + $("header").height() + $("nav").height();
+
+    console.log("section: " + $(".sectionContainer").height());
+    console.log("freezers: " + $(".freezers").height());
+    console.log("header: " + $("header").height());
+    console.log("nav: " + $("nav").height());
+    console.log("window: " + $(window).height());
+
+    if(contentHeight >= $(window).height()) {
+        console.log("moving it down");
+    }
+
+
 });
