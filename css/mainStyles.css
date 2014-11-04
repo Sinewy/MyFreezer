@@ -238,7 +238,7 @@ section.sectionContainerBackground {
     min-height: 100%;
     width: 800px;
     position: absolute;
-    top: 0px;
+    top: 165px;
     left: 50%;
     margin-left: -400px;
     z-index: -20;
@@ -252,7 +252,7 @@ section.sectionContainer {
     min-height: 100%;
     width: 800px;
     position: absolute;
-    top: 0px;
+    top: 165px;
     left: 50%;
     margin-left: -400px;
 }
@@ -260,7 +260,7 @@ section.sectionContainer {
 .freezers:before {
      content: "";
      display: block;
-     height: 180px;
+     height: 10px;
  }
 
 .freezerBox {

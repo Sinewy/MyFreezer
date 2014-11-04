@@ -30,8 +30,12 @@ $userId = $_SESSION["UserID"];
 <section class="sectionContainer">
     <div class="freezers ">
 	    <?php echo createMainDashboardView($userId); ?>
-        <?php echo createMainDashboardView($userId); ?>
-        <?php echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
+<!--        --><?php //echo createMainDashboardView($userId); ?>
 <!--        --><?php //echo createMainDashboardView($userId); ?>
     </div>
 	<?php echo displayMessage(); ?>
