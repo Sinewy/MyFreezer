@@ -17,7 +17,8 @@ $(document).ready(function() {
             console.log(" drawer ididid: " + dId);
             dId = "noId";
         } else {
-            var freezerName = element.name;
+            console.log(element.title);
+            var freezerName = element.title;
             dId = freezerName.substring(7);
         }
         showAddEditFreezerWindow(dId);
@@ -96,7 +97,7 @@ $(document).ready(function() {
 
     $(".deleteFreezerBtn").click(deleteFreezer);
     function deleteFreezer() {
-        var id = this.name.substring(9);
+        var id = this.title.substring(9);
         console.log("delete btn id: " + id);
         var posting = $.post("isFreezerEmpty.php", {freezerId: id});
         posting.success(function(data) {
@@ -118,7 +119,7 @@ $(document).ready(function() {
             }
 //            console.log("data from isEmpty: " + data);
         });
-        console.log(this.name);
+        console.log(this.title);
     }
 
     $("#deleteFreezerDialog").dialog({
@@ -191,27 +192,29 @@ $(document).ready(function() {
 //        console.log("moving it down");
 //    }
 
-    setAppropriateBgSize();
-
-    function setAppropriateBgSize() {
-        var contentHeight = Math.ceil($(".freezerBox").length/2) * ($("div .freezerBox").height() + 30) + 220;
-        if(contentHeight >= $(window).height()) {
-            $(".sectionContainerBackground").height(contentHeight);
-//        $("footer").position();
-            $("footer").css({top: contentHeight - 20});
-            console.log("moving it down");
-        } else {
-            $(".sectionContainerBackground").height($(window).height() - 165);
-            $(".sectionContainer").height($(window).height() - 165);
-            $("footer").css({top: 'auto'});
-            $("footer").css({bottom: '1%'});
-        }
-    }
-
-    $( window ).resize(function() {
-        console.log("window resizded");
-        setAppropriateBgSize();
-    });
+//    setAppropriateBgSize();
+//
+//    function setAppropriateBgSize() {
+//        console.log("setting appropriate size");
+//        var contentHeight = Math.ceil($(".freezerBox").length/2) * ($("div .freezerBox").height() + 30) + 220;
+//        console.log("content h: " + contentHeight);
+//        if(contentHeight >= $(window).height()) {
+//            $(".sectionContainerBackground").height(contentHeight);
+////        $("footer").position();
+//            $("footer").css({top: contentHeight - 20});
+//            console.log("moving it down");
+//        } else {
+//            $(".sectionContainerBackground").height($(window).height() - 165);
+//            $(".sectionContainer").height($(window).height() - 165);
+//            $("footer").css({top: 'auto'});
+//            $("footer").css({bottom: '1%'});
+//        }
+//    }
+//
+//    $( window ).resize(function() {
+//        console.log("window resizded");
+//        setAppropriateBgSize();
+//    });
 //    $(".sectionContainerBackground").
 
 

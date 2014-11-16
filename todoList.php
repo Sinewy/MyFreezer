@@ -13,3 +13,8 @@
 //TODO - make forogt passwor functionality
 //TODO - is there are more than 6 freezers - correct mainDasboardStyles
 //TODO - add translations - transaltion files
+
+//TODO - make middle section bg appropriate size - also when resizing the browser window
+//TODO - appropriately align footer - also when resizing the browser window
+
+//TODO - add commnet field to freezers and maybe to drawers too.

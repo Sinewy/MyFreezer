@@ -376,11 +376,32 @@ function createMainDashboardView($userId) {
 	$output = "";
 	if(mysqli_num_rows($freezerData) > 0) {
 		while($freezer = mysqli_fetch_assoc($freezerData)) {
-			$output .= "<div class=\"freezerBox\" id=\"freezer" . $freezer["FreezerID"] . "\">";
-			$output .= addEditDeleteButtonsJS("Freezer", $freezer["FreezerID"]);
-			$output .= "<a href=\"freezerDetail.php?fid=" . $freezer["FreezerID"] . "\">";
-			$output .= createFreezerData($freezer["Name"], $freezer["Description"], $freezer["Location"], $freezer["Make"]);
-			$output .= "</a></div>";
+
+			$output .= "<div class='freezerBox' id='freezer". $freezer["FreezerID"] . "'>";
+			$output .= "<div class='freezerHeader'>";
+			$output .= "<a href='freezerDetail.php?fid=" . $freezer["FreezerID"] . "'>";
+			$output .= "<div class='fTitle'>" . $freezer["Name"] . "</div>";
+			$output .= "</a>";
+			$output .= "<div class='deleteBtn deleteFreezerBtn' title='deleteBtn" . $freezer["FreezerID"] . "'><img src='images/trash.png'></div>";
+			$output .= "<div class='editBtn editFreezerDataBtn' title='editBtn" . $freezer["FreezerID"] . "'><img src='images/edit.png'></div>";
+			$output .= "</div>";
+			$output .= "<a href='freezerDetail.php?fid=" . $freezer["FreezerID"] . "'>";
+			$output .= "<div class='fMainData'>";
+			$output .= "<div class='fIcon'><img src='images/freezerIcon.png'></div>";
+			$output .= "<div class='fMake'>Make: ". $freezer["Make"] . "</div>";
+			$output .= "<div class='fLocation'>Location: " . $freezer["Location"] . "</div>";
+			$output .= "<div class='fDescription'>Description: " . $freezer["Description"]. "</div>";
+			$output .= "</div>";
+			$output .= "</a>";
+			$output .= "</div>";
+//			name=\"editBtn" . $elementId . "\" value=\"Edit\" />";
+//			$buttonsOutput .= "<input class=\"delete" . $elementName . "Btn\" type=\"button\" name=\"deleteBtn" . $elementId .
+
+//			$output .= "<div class=\"freezerBox\" id=\"freezer" . $freezer["FreezerID"] . "\">";
+//			$output .= addEditDeleteButtonsJS("Freezer", $freezer["FreezerID"]);
+//			$output .= "<a href=\"freezerDetail.php?fid=" . $freezer["FreezerID"] . "\">";
+//			$output .= createFreezerData($freezer["Name"], $freezer["Description"], $freezer["Location"], $freezer["Make"]);
+//			$output .= "</a></div>";
 		}
 	} else {
 		$output = "<p id='noFreezersYet'>There are no freezers in your system yet. Please add them.</p>";
@@ -440,9 +461,33 @@ function createFreezerDrawerView($freezerId) {
 	$output = "<div class=\"drawers\">";
 	if(mysqli_num_rows($drawerData) > 0) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
-			$output .= "<div class=\"drawer\" id=\"drawer" . $drawer["DrawerID"] . "\">";
-			$output .= createDrawerInfo($drawer["DrawerID"], $drawer["Name"], $drawer["Description"]);
-			$output .= addEditDeleteButtonsJS("Drawer", $drawer["DrawerID"]);
+			$output .= "<div class='drawer' id='drawer" . $drawer["DrawerID"] . "'>";
+			$output .= "<div class='row drawerNameRow'>";
+			$output .= "<div class='drawerName left'>" . $drawer["Name"] . "</div>";
+			$output .= "<div class='moreInfo left'>I</div>";
+			$output .= "<div class='edit left'>Edit</div>";
+			$output .= "<div class='delete left'>Delete</div>";
+			$output .= "</div>";
+			$output .= "<div class='row columnNames clearFix'>";
+			$output .= "<div class='contentDescr left''>DESCRIPTION</div>";
+			$output .= "<div class='amount left'>AMOUNT</div>";
+			$output .= "<div class='quantity left'>QUANTITY</div>";
+			$output .= "<div class='date left'>DATE</div>";
+			$output .= "</div>";
+
+//
+//			<div class="row clearFix">
+//				<div class="contentDescr left">Super food in my first drawer</div>
+//				<div class="amount left">ena posoda, za dve osebi</div>
+//				<div class="quantity left">2</div>
+//				<div class="date left">2014-12-03 15:25:23</div>
+//			</div>
+//		</div>
+//
+
+
+//			$output .= createDrawerInfo($drawer["DrawerID"], $drawer["Name"], $drawer["Description"]);
+//			$output .= addEditDeleteButtonsJS("Drawer", $drawer["DrawerID"]);
 			$output .= createDrawerContentView($drawer["DrawerID"]);
 			$output .= "</div>";
 		}
@@ -473,19 +518,29 @@ function createDrawerInfo($dId, $dName, $dDescription) {
 
 function createDrawerContentView($drawerId) {
 	$allContent = findAllContentForDrawer($drawerId);
-	$output = "<div class=\"content\">";
-	$output .= "<table><tr><td>Description</td><td>Amount</td><td>Quantity</td></tr>";
+//	$output = "<div class=\"content\">";
+//	$output .= "<table><tr><td>Description</td><td>Amount</td><td>Quantity</td></tr>";
+	$output = "";
 	if(mysqli_num_rows($allContent) > 0) {
 		while($content = mysqli_fetch_assoc($allContent)) {
-			$output .= "<tr><td>" . $content["Description"] . "</td>";
-			$output .= "<td>" . $content["Amount"] . "</td>";
-			$output .= "<td>" . $content["Quantity"] . "</td></tr>";
+			$output .= "<div class='row clearFix'>";
+			$output .= "<div class='contentDescr left'>" . $content["Description"] . "</div>";
+			$output .= "<div class='amount left'>" . (trim($content["Amount"]) == "" ? "-" : $content["Amount"]) . "</div>";
+			$output .= "<div class='quantity left'>" . (trim($content["Quantity"]) == "" ? "-" : $content["Quantity"]) . "</div>";
+//			$output .= "<div class='date left'>" . $content["Date"] . "</div>";
+			$output .= "<div class='date left'>2014-11-08</div>";
+			$output .= "</div>";
+
+//			$output .= "<tr><td>" . $content["Description"] . "</td>";
+//			$output .= "<td>" . $content["Amount"] . "</td>";
+//			$output .= "<td>" . $content["Quantity"] . "</td></tr>";
 		}
 	} else {
-		$output .= "<tr><td class='emptyDrawer' colspan=\"3\">This drawer is empty.</td></tr>";
+//		$output .= "<tr><td class='emptyDrawer' colspan=\"3\">This drawer is empty.</td></tr>";
+		$output .= "<p class='emptyDrawer' colspan=\"3\">This drawer is empty.<p>";
 	}
-	$output .= "</table>";
-	$output .= "</div>";
+//	$output .= "</table>";
+//	$output .= "</div>";
 	return $output;
 }
 
