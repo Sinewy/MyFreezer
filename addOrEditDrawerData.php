@@ -26,14 +26,14 @@ $contentOutput = "";
 
 if(isset($_GET["addOrEditData"])) {
 
-	echo("you came from freezer detail.");
+//	echo("you came from freezer detail.");
 
 	if(isset($_GET["drawerID"]) && $_GET["drawerID"] == "noId") {
 
 
 		$drawerName = "";
 		$drawerDescription = "";
-		$contentOutput = "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
+		$contentOutput = "<p id='emptyDrawer' class='emptyDrawer'>This drawer is still empty. Add some content.</p>";
 		//echo("adding new drawer");
 		$_SESSION["drawerID"] = $_GET["drawerID"];
 
@@ -86,7 +86,11 @@ if(isset($_GET["addOrEditData"])) {
 <?php include("includes/head.php"); ?>
 	<script src="js/validationFunctions.js"></script>
 	<script src="js/addOrEditDrawerData.js"></script>
-<?php include("includes/headPart2.php"); ?>
+<?php //include("includes/headPart2.php"); ?>
+
+</head>
+<body>
+
 
 <?php echo formErrors($errors); ?>
 <?php echo displayMessage(); ?>
@@ -95,42 +99,56 @@ if(isset($_GET["addOrEditData"])) {
 	<form id="addEditDrawerForm" action="addOrEditDrawerData.php" method="POST">
 		<fieldset>
 			<div class="drawerDetails">
-				<p>Add or Edit Drawer data</p>
+				<p class="title">Add or Edit Drawer data</p>
 				<input type="hidden" id="getDrawerId" name="getDrawerId" value="<?php echo htmlspecialchars($_SESSION["drawerID"]); ?>" />
-				<label for="drawerName">Drawer Name:</label>
-				<input type="text" id="drawerName" name="drawerName" size="45" placeholder="enter drawer name" value="<?php echo htmlspecialchars($drawerName); ?>" /><div class="formError" id="dNameError"></div> <br />
-				<label for="drawerDescription">Drawer Description:</label>
-				<input type="text" id="drawerDescription" name="drawerDescription" size="45" placeholder="enter drawer description" value="<?php echo htmlspecialchars($drawerDescription); ?>" /><div class="formError" id="dDescriptionError"></div>
+				<label for="drawerName">Drawer Name:</label><br>
+				<input type="text" id="drawerName" name="drawerName" size="60" placeholder="enter drawer name" value="<?php echo htmlspecialchars($drawerName); ?>" /><div class="formError" id="dNameError"></div> <br />
+				<label for="drawerDescription">Drawer Description:</label><br>
+				<input type="text" id="drawerDescription" name="drawerDescription" size="100" placeholder="enter drawer description" value="<?php echo htmlspecialchars($drawerDescription); ?>" /><div class="formError" id="dDescriptionError"></div>
 			</div>
 			<hr />
 			<div id="drawerContent">
-				<p>Content</p>
-				<p>Name/Description | Amount | Quantity | Date</p>
+				<p class="contentHeading">Content</p>
+				<p class="fieldNames left">Name/Description</p>
+				<p class="fieldNames left pushAmount">Amount</p>
+				<p class="fieldNames left pushQuantity">Quantity</p>
+				<p class="fieldNames left pushDate">Date</p>
 				<?php echo $contentOutput; ?>
 			</div>
 			<hr />
 			<div class="addNewContentLine">
-				<input id="addNewContentBtn" type="button" name="addNewContent" value="+" /><span>Add new Content line</span>
+				<input id="addNewContentBtn" class="button" type="button" name="addNewContent" value="+   Add New Content" />
 			</div>
 			<hr />
 			<div id="submitOrCancel">
 				<input type="hidden" name="submittedSaveData" value="true" />
-				<input id="saveEditDrawerDataForm" type="button" name="save" value="Save" />
-				<input id="cancelAndCloseForm" type="button" name="cancelAndClose" value="Cancel" />
+				<input id="saveEditDrawerDataForm" class="button pushBtn" type="button" name="save" value="Save" />
+				<input id="cancelAndCloseForm" class="button" type="button" name="cancelAndClose" value="Cancel" />
 			</div>
 		</fieldset>
 	</form>
 </div>
 
-<div>
-	<pre>
-	<?php
-		print_r($_GET);
-		print_r($_POST);
-		print_r($_SESSION);
-	?>
-	</pre>
-</div>
+<!--<div>-->
+<!--	<pre>-->
+<!--	--><?php
+//		print_r($_GET);
+//		print_r($_POST);
+//		print_r($_SESSION);
+//	?>
+<!--	</pre>-->
+<!--</div>-->
 
 
-<?php include("includes/footer.php"); ?>
+<?php //include("includes/footer.php"); ?>
+
+</body>
+
+</html>
+
+<?php
+if (isset($dbc)) {
+	mysqli_close($dbc);
+}
+?>
+

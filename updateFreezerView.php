@@ -11,7 +11,8 @@ $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if(isset($_POST["freezerId"])) {
 	$fId = $_POST["freezerId"];
-	$freezerData = findFreezerByIdAndUserId($fId, $userId);
-	$returnData["content"] = createFreezerData($freezerData["Name"], $freezerData["Description"], $freezerData["Location"], $freezerData["Make"]);
+//	$freezerData = findFreezerByIdAndUserId($fId, $userId);
+//	$returnData["content"] = createFreezerData($freezerData["Name"], $freezerData["Description"], $freezerData["Location"], $freezerData["Make"]);
+	$returnData["content"] = createFreezerData($fId, $userId);
 	echo json_encode($returnData);
 }

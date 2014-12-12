@@ -82,4 +82,4 @@
 
 </section>
 
-<?php include("includes/footer.php"); ?>
+<?php include("includes/footerLogin.php"); ?>

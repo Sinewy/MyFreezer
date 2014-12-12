@@ -11,8 +11,10 @@ $pageTitle = "Updating Drawer View";
 
 if(isset($_POST["drawerId"])) {
 	$dId = $_POST["drawerId"];
-	$drawerData = findDrawerByDrawerId($dId);
-	$returnData["drawerInfo"] = createDrawerInfo($dId, $drawerData["Name"], $drawerData["Description"]);
-	$returnData["content"] = createDrawerContentView($dId);
+//	$drawerData = createDrawer($dId);
+//	$drawerData = findDrawerByDrawerId($dId);
+//	$returnData["drawerInfo"] = createDrawerInfo($dId, $drawerData["Name"], $drawerData["Description"]);
+//	$returnData["content"] = createDrawerContentView($dId);
+	$returnData["drawer"] = createDrawer($dId);
 	echo json_encode($returnData);
 }

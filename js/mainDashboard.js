@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    adjustMainSectionSize();
+
     // ************ variables ************\\
 
     var typeOfColorboxClose = "";
@@ -29,8 +31,11 @@ $(document).ready(function() {
             iframe:true,
             //transition: "fade",
             scrolling: true,
-            innerWidth:'960',
-            innerHeight:'600',
+            overlayClose: false,
+            escKey: false,
+            closeButton: false,
+            innerWidth:'640',
+            innerHeight:'460',
             href:"modifyFreezer.php?freezerID=" + id + "&addOrEditFreezerData=true",
             onClosed:function(){
                 if(typeOfColorboxClose == "submit") {
@@ -53,11 +58,15 @@ $(document).ready(function() {
         var posting = $.post("updateFreezerView.php", {freezerId: id});
         posting.success(function(data) {
             console.log("data got back: " + data);
-            $("#freezer" + id + " .freezerData").replaceWith($.parseJSON(data).content);
+            //$("#freezer" + id + " .freezerData").replaceWith($.parseJSON(data).content);
+            $("#freezer" + id).replaceWith($.parseJSON(data).content);
+            $("#freezer" + id + " .editFreezerDataBtn").click(function() {
+                prepareForShowForm(this);
+            });
+            $("#freezer" + id + " .deleteFreezerBtn").click(deleteFreezer);
         });
     }
 
-//    TODO - write this function
     function addNewFreezerToView() {
         console.log("add new freezers: freezers id inside add");
         var displayedFreezers = [];
@@ -78,7 +87,7 @@ $(document).ready(function() {
             postForFreezer.success(function(data) {
                 console.log("data from get missing freeezer data:" + data);
                 if($("#noFreezersYet").length) {
-                    console.log("no freezers yet exists")
+                    console.log("no freezers yet exists");
                     $("#noFreezersYet").remove();
                 }
                 $(".freezers").append(data);
@@ -93,7 +102,7 @@ $(document).ready(function() {
 
     window.setCloseType = function(type) {
         typeOfColorboxClose = type;
-    }
+    };
 
     $(".deleteFreezerBtn").click(deleteFreezer);
     function deleteFreezer() {
@@ -217,5 +226,22 @@ $(document).ready(function() {
 //    });
 //    $(".sectionContainerBackground").
 
+
+    function adjustMainSectionSize() {
+        console.log("Adjusting height");
+        var footerHeight = $("footer").height();
+        var headerHeight = $("header").height() + $("nav").height();
+        var spacerHeight = 12;
+        var height = $(window).height() - footerHeight - headerHeight - spacerHeight;
+        var mySection = $(".sectionContainer");
+        if(mySection.height() < height) {
+            mySection.height(height);
+        }
+    }
+
+    $(window).resize(function() {
+        $(".sectionContainer").height('auto');
+        adjustMainSectionSize();
+    });
 
 });

@@ -409,14 +409,37 @@ function createMainDashboardView($userId) {
 	return $output;
 }
 
-function createFreezerData($name, $desc, $loc, $make){
+//function createFreezerData($name, $desc, $loc, $make){
+function createFreezerData($fId, $userId){
+
+	$freezer = findFreezerByIdAndUserId($fId, $userId);
+//	$returnData["content"] = createFreezerData($freezerData["Name"], $freezerData["Description"], $freezerData["Location"], $freezerData["Make"]);
+
 	$output = "";
-	$output .= "<div class=\"freezerData\">";
-	$output .= "<p>" . htmlentities($name) . "</p>";
-	if(hasPresence($desc)) { $output .=  "<p>" . htmlentities($desc) . "</p>";}
-	if(hasPresence($loc)) { $output .=  "<p>" . htmlentities($loc) . "</p>";}
-	if(hasPresence($make)) { $output .=  "<p>" . htmlentities($make) . "</p>";}
+	$output .= "<div class='freezerBox' id='freezer". $freezer["FreezerID"] . "'>";
+	$output .= "<div class='freezerHeader'>";
+	$output .= "<a href='freezerDetail.php?fid=" . $freezer["FreezerID"] . "'>";
+	$output .= "<div class='fTitle'>" . $freezer["Name"] . "</div>";
+	$output .= "</a>";
+	$output .= "<div class='deleteBtn deleteFreezerBtn' title='deleteBtn" . $freezer["FreezerID"] . "'><img src='images/trash.png'></div>";
+	$output .= "<div class='editBtn editFreezerDataBtn' title='editBtn" . $freezer["FreezerID"] . "'><img src='images/edit.png'></div>";
 	$output .= "</div>";
+	$output .= "<a href='freezerDetail.php?fid=" . $freezer["FreezerID"] . "'>";
+	$output .= "<div class='fMainData'>";
+	$output .= "<div class='fIcon'><img src='images/freezerIcon.png'></div>";
+	$output .= "<div class='fMake'>Make: ". $freezer["Make"] . "</div>";
+	$output .= "<div class='fLocation'>Location: " . $freezer["Location"] . "</div>";
+	$output .= "<div class='fDescription'>Description: " . $freezer["Description"]. "</div>";
+	$output .= "</div>";
+	$output .= "</a>";
+	$output .= "</div>";
+//
+//	$output .= "<div class=\"freezerData\">";
+//	$output .= "<p>" . htmlentities($name) . "</p>";
+//	if(hasPresence($desc)) { $output .=  "<p>" . htmlentities($desc) . "</p>";}
+//	if(hasPresence($loc)) { $output .=  "<p>" . htmlentities($loc) . "</p>";}
+//	if(hasPresence($make)) { $output .=  "<p>" . htmlentities($make) . "</p>";}
+//	$output .= "</div>";
 	return $output;
 }
 
@@ -442,16 +465,16 @@ function createEditDrawerContentView($drawerId) {
 			$packingDate = $content["PackingDate"];
 			
 			$output .=  "<div class='contentRowStyle' id='contentRow" . $cId . "'>";
-			$output .=  "<input type='text' id='contentDescription" . $cId . "' name='contentDescription" . $cId . "' size='60' placeholder='enter content: stakes' value='" . $cDesc . "' />";
-			$output .=  "<input type='text' id='contentAmount" . $cId . "' name='contentAmount" . $cId . "' size='30' placeholder='enter amount: 2 pieces' value='" . $cAmnt . "' />";
+			$output .=  "<input type='text' id='contentDescription" . $cId . "' name='contentDescription" . $cId . "' size='40' placeholder='enter content: stakes' value='" . $cDesc . "' />";
+			$output .=  "<input type='text' id='contentAmount" . $cId . "' name='contentAmount" . $cId . "' size='25' placeholder='enter amount: 2 pieces' value='" . $cAmnt . "' />";
 			$output .=  "<input type='number' id='contentQuantity" . $cId . "' name='contentQuantity" . $cId . "' min='1' max='20' placeholder='quantity: 4' value='" . $cQty . "' />";
 			$output .=  "<input type='date' id='contentDate" . $cId . "' name='contentPackingDate" . $cId . "' placeholder='mm/dd/YYYY' value='" . $packingDate . "' />";
-			$output .=  "<input type='button' class='deleteCurrentRowBtn'  name='" . $cId . "' value='Delete' />";
+			$output .=  "<input type='button' class='deleteCurrentRowBtn button'  name='" . $cId . "' value='Delete' />";
 			$output .=  "</div>";
 			$output .=  "<div class='formError' id='fError" . $cId . "'></div>";
 		}
 	} else {
-		$output .= "<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>";
+		$output .= "<p id='emptyDrawer' class='emptyDrawer'>This drawer is still empty. Add some content.</p>";
 	}
 	return $output;
 }
@@ -464,9 +487,10 @@ function createFreezerDrawerView($freezerId) {
 			$output .= "<div class='drawer' id='drawer" . $drawer["DrawerID"] . "'>";
 			$output .= "<div class='row drawerNameRow'>";
 			$output .= "<div class='drawerName left'>" . $drawer["Name"] . "</div>";
-			$output .= "<div class='moreInfo left'>I</div>";
-			$output .= "<div class='edit left'>Edit</div>";
-			$output .= "<div class='delete left'>Delete</div>";
+			$output .= "<div class='moreDrawerInfoBtn left'>&nbsp;</div>";
+//			$output .= "<div class='moreDrawerInfoBtn left'><img src='images/moreInfo.svg'></div>";
+			$output .= "<div class='editDrawerBtn left' id='editDrawer" . $drawer["DrawerID"] . "'><img src='images/edit.png'></div>";
+			$output .= "<div class='deleteDrawerBtn left' id='deleteDrawer" . $drawer["DrawerID"] . "'><img src='images/trash.png'></div>";
 			$output .= "</div>";
 			$output .= "<div class='row columnNames clearFix'>";
 			$output .= "<div class='contentDescr left''>DESCRIPTION</div>";
@@ -475,6 +499,11 @@ function createFreezerDrawerView($freezerId) {
 			$output .= "<div class='date left'>DATE</div>";
 			$output .= "</div>";
 
+//
+//			<div class=\"modifyBox\">";
+//	$buttonsOutput .= "<input class=\"edit" . $elementName . "DataBtn\" type=\"button\" name=\"editBtn" . $elementId . "\" value=\"Edit\" />";
+//	$buttonsOutput .= "<input class=\"delete" . $elementName . "Btn\" type=\"button\" name=\"deleteBtn" . $elementId . "\" value=\"Delete\" />";
+//	$buttonsOutput .= "</div>";
 //
 //			<div class="row clearFix">
 //				<div class="contentDescr left">Super food in my first drawer</div>
@@ -500,18 +529,34 @@ function createFreezerDrawerView($freezerId) {
 
 function createDrawer($dId) {
 	$dData = findDrawerByDrawerId($dId);
-	$output = "<div class=\"drawer\" id=\"drawer" . $dId . "\">";
-	$output .= createDrawerInfo($dId, $dData["Name"], $dData["Description"]);
-	$output .= addEditDeleteButtonsJS("Drawer", $dId);
+//	$output = "<div class=\"drawer\" id=\"drawer" . $dId . "\">";
+//	$output .= createDrawerInfo($dId, $dData["Name"], $dData["Description"]);
+//	$output .= addEditDeleteButtonsJS("Drawer", $dId);
+	$output = "";
+	$output .= "<div class='drawer' id='drawer" . $dData["DrawerID"] . "'>";
+	$output .= "<div class='row drawerNameRow'>";
+	$output .= "<div class='drawerName left'>" . $dData["Name"] . "</div>";
+	$output .= "<div class='moreDrawerInfoBtn left'>&nbsp;</div>";
+//			$output .= "<div class='moreDrawerInfoBtn left'><img src='images/moreInfo.svg'></div>";
+	$output .= "<div class='editDrawerBtn left' id='editDrawer" . $dData["DrawerID"] . "'><img src='images/edit.png'></div>";
+	$output .= "<div class='deleteDrawerBtn left' id='deleteDrawer" . $dData["DrawerID"] . "'><img src='images/trash.png'></div>";
+	$output .= "</div>";
+	$output .= "<div class='row columnNames clearFix'>";
+	$output .= "<div class='contentDescr left''>DESCRIPTION</div>";
+	$output .= "<div class='amount left'>AMOUNT</div>";
+	$output .= "<div class='quantity left'>QUANTITY</div>";
+	$output .= "<div class='date left'>DATE</div>";
+	$output .= "</div>";
+
 	$output .= createDrawerContentView($dId);
 	$output .= "</div>";
 	return $output;
 }
 
 function createDrawerInfo($dId, $dName, $dDescription) {
-	$output = "<div class='drawerInfo' id='drawerInfo" . $dId . "'>";
-	$output .= "<p>" . $dName . "</p>";
-	$output .= "<p>" . $dDescription . "</p>";
+	$output = "<div class='drawerName left'>";
+	$output .= $dName;
+//	$output .= "<p>" . $dDescription . "</p>";
 	$output .= "</div>";
 	return $output;
 }
@@ -528,7 +573,8 @@ function createDrawerContentView($drawerId) {
 			$output .= "<div class='amount left'>" . (trim($content["Amount"]) == "" ? "-" : $content["Amount"]) . "</div>";
 			$output .= "<div class='quantity left'>" . (trim($content["Quantity"]) == "" ? "-" : $content["Quantity"]) . "</div>";
 //			$output .= "<div class='date left'>" . $content["Date"] . "</div>";
-			$output .= "<div class='date left'>2014-11-08</div>";
+//			$output .= "<div class='date left'>2014-11-08</div>";
+			$output .= "<div class='date left'>" . (trim($content["PackingDate"]) == "" ? "-" : $content["PackingDate"]) . "</div>";
 			$output .= "</div>";
 
 //			$output .= "<tr><td>" . $content["Description"] . "</td>";

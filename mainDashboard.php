@@ -26,8 +26,8 @@ $userId = $_SESSION["UserID"];
 	<div id="addNewFreezerBtn"><a href="#"><img src="images/addIcon.png">Add New Freezer</a></div>
 </nav>
 
-<section class="sectionContainerBackground"></section>
-<section class="sectionContainer">
+<!--<section class="sectionContainerBackground"></section>-->
+<section class="sectionContainer clearFix">
     <div class="freezers">
 <!--		<div class="freezerBox">-->
 <!--			<div class="freezerHeader">-->
@@ -55,6 +55,7 @@ $userId = $_SESSION["UserID"];
 	<?php echo displayMessage(); ?>
 </section>
 
+<section class="shadowOnly">&nbsp;</section>
 
 <!--<div class="mainField">-->
 <!---->

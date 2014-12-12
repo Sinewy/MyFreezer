@@ -14,17 +14,17 @@ $(document).ready(function() {
 
     function addNewContentRow() {
 
-        //console.log("btn was clicked AGAIN");
+        console.log("btn was clicked AGAIN");
 
         var contentId = "noId" + contentRowNumber;
         var contentRow = "";
 
         contentRow +=  "<div class=\"contentRowStyle\" id=\"contentRow" + contentId + "\">";
-        contentRow +=  "<input type=\"text\" id=\"contentDescription" + contentId + "\" name=\"contentDescription" + contentId + "\" size=\"60\" placeholder=\"enter content: stakes\" />";
-        contentRow +=  "<input type=\"text\" id=\"contentAmount" + contentId + "\" name=\"contentAmount" + contentId + "\" size=\"30\" placeholder=\"enter amount: 2 pieces\" />";
+        contentRow +=  "<input type=\"text\" id=\"contentDescription" + contentId + "\" name=\"contentDescription" + contentId + "\" size=\"40\" placeholder=\"enter content: stakes\" />";
+        contentRow +=  "<input type=\"text\" id=\"contentAmount" + contentId + "\" name=\"contentAmount" + contentId + "\" size=\"25\" placeholder=\"enter amount: 2 pieces\" />";
         contentRow +=  "<input type=\"number\" id=\"contentQuantity" + contentId + "\" name=\"contentQuantity" + contentId + "\" min=\"1\" max=\"99\" value='1' />";
         contentRow +=  "<input type=\"date\" id=\"contentDate" + contentId + "\" name=\"contentDate" + contentId + "\" placeholder=\"mm/dd/YYYY\" />";
-        contentRow +=  "<input class=\"deleteCurrentRowBtn\" type=\"button\" name=\"" + contentId + "\" value=\"Delete\" />";
+        contentRow +=  "<input class=\"deleteCurrentRowBtn button\" type=\"button\" name=\"" + contentId + "\" value=\"Delete\" />";
         contentRow +=  "</div>";
         contentRow +=  "<div class='formError' id='fError" + contentId + "' ></div>";
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
             $("#contentRow" + this.name).remove();
             $("#fError" + this.name).remove();
         } else {
-            $("#contentRow" + this.name).replaceWith("<p id='emptyDrawer'>This drawer is still empty. Add some content.</p>");
+            $("#contentRow" + this.name).replaceWith("<p id='emptyDrawer' class='emptyDrawer'>This drawer is still empty. Add some content.</p>");
         }
     }
 

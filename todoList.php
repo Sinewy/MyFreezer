@@ -10,11 +10,15 @@
 //TODO - limit all text fields
 //TODO - make all querys makesqlsafe
 //TODO - display all fields as htmentities
-//TODO - make forogt passwor functionality
+//TODO - make forgot password functionality
 //TODO - is there are more than 6 freezers - correct mainDasboardStyles
-//TODO - add translations - transaltion files
+//TODO - add translations - translation files
 
 //TODO - make middle section bg appropriate size - also when resizing the browser window
 //TODO - appropriately align footer - also when resizing the browser window
 
-//TODO - add commnet field to freezers and maybe to drawers too.
+//TODO - add comment field to freezers and maybe to drawers too.
+
+//TODO - make drawers collapsible - arrow btn to expand or collapse a drawer view
+
+//TODO - colorbox close on overlay ans esc key - make cancel action...

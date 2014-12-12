@@ -11,6 +11,7 @@ $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if(isset($_POST["freezerId"])) {
 	$fId = $_POST["freezerId"];
-	$freezerData = createFreezer($fId, $userId);
+//	$freezerData = createFreezer($fId, $userId);
+	$freezerData = createFreezerData($fId, $userId);
 	echo $freezerData;
 }

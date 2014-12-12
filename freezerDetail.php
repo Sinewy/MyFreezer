@@ -41,14 +41,14 @@ if(isset($_GET["fid"])) {
 <?php include("includes/header.php"); ?>
 
 <nav>
-	<div><a href="mainDashboard.php"><img src="images/homeIcon.png">Home</a></div>
+	<div><a href="mainDashboard.php"><img src="images/homeIcon.png">Home</a> / <?php echo $freezerName; ?></div>
 	<div><a href="logout.php"><img src="images/logoutIcon.png"></a></div>
 	<div><a href="#"><img src="images/userIcon.png"><?php echo isset($_SESSION["Username"]) ? $_SESSION["Username"] : "Unknown User!!" ?></a></div>
-	<div id="addNewFreezerBtn"><a href="#"><img src="images/addIcon.png">Add New Freezer</a></div>
+	<div id="addNewDrawerBtn"><a href="#"><img src="images/addIcon.png">Add New Drawer</a></div>
 </nav>
 
-<section class="sectionContainerFreezerDetailBackground"></section>
-<section class="sectionContainerFreezerDetail">
+<!--<section class="sectionContainerFreezerDetailBackground clearFix"></section>-->
+<section class="sectionContainerFreezerDetail clearFix">
 	<div class="freezerName"><?php echo $freezerName; ?></div>
 	<div class="freezerDescription">Description: <?php echo $freezerDescription; ?></div>
 	<div class="freezerLocation">Location: <?php echo $freezerLocation; ?></div>
@@ -101,16 +101,16 @@ if(isset($_GET["fid"])) {
 <!--	<h3>--><?php //echo $freezerMake; ?><!--</h3>-->
 
 	<?php echo $drawersView; ?>
-
-	<div id="addNewDrawerBtn">
-		<input type="button" name="addNewDrawerBtn" value="Add New Drawer" />
-	</div>
+<!---->
+<!--	<div id="addNewDrawerBtn">-->
+<!--		<input type="button" name="addNewDrawerBtn" value="Add New Drawer" />-->
+<!--	</div>-->
 
 	<?php echo formErrors($errors); ?>
 	<?php echo displayMessage(); ?>
 </section>
 
-
+<section class="shadowOnly">&nbsp;</section>
 
 
 
@@ -121,10 +121,11 @@ if(isset($_GET["fid"])) {
 			Are you sure you want to delete this drawer and all of its containing content?</p>
 	</div>
 
-	<div>
-		<pre>
-			<?php print_r($_SESSION); ?>
-		</pre>
-	</div>
+<!---->
+<!--	<div>-->
+<!--		<pre>-->
+<!--			--><?php //print_r($_SESSION); ?>
+<!--		</pre>-->
+<!--	</div>-->
 
 <?php include("includes/footer.php"); ?>

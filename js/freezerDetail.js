@@ -2,13 +2,15 @@
 
 $(document).ready(function() {
 
+    adjustMainSectionSize();
+
     // ************ variables ************\\
 
     var typeOfColorboxClose = "";
 
     // ************ variables ************//
 
-    $("#addNewDrawerBtn, .editDrawerDataBtn").click(function() {
+    $("#addNewDrawerBtn, .editDrawerBtn").click(function() {
         prepareForShowForm(this);
     });
 
@@ -19,8 +21,10 @@ $(document).ready(function() {
             console.log(" drawer ididid: " + dId);
             dId = "noId";
         } else {
-            var drawerName = element.name;
-            dId = drawerName.substring(7);
+            console.log("else - edit");
+            var drawerName = element.id;
+            dId = drawerName.substring(10);
+            console.log("drawer id: "  + dId);
         }
         showAddEditWindow(dId);
     }
@@ -30,8 +34,11 @@ $(document).ready(function() {
             iframe:true,
             //transition: "fade",
             scrolling: true,
+            overlayClose: false,
+            escKey: false,
+            closeButton: false,
             innerWidth:'960',
-            innerHeight:'600',
+            innerHeight:'840',
             href:"addOrEditDrawerData.php?drawerID=" + id + "&addOrEditData=true",
             onClosed:function(){
                 if(typeOfColorboxClose == "submit") {
@@ -51,8 +58,14 @@ $(document).ready(function() {
         console.log("update display: drawer id inside update: " + id);
             var posting = $.post("updateDrawerView.php", {drawerId: id});
             posting.success(function(data) {
-                $("#drawer" + id + " .drawerInfo").replaceWith($.parseJSON(data).drawerInfo);
-                $("#drawer" + id + " .content").replaceWith($.parseJSON(data).content);
+                $("#drawer" + id).replaceWith($.parseJSON(data).drawer);
+
+                $("#drawer" + id + " .editDrawerBtn").click(function() {
+                    prepareForShowForm(this);
+                });
+                $("#drawer" + id + " .deleteDrawerBtn").click(deleteDrawer);
+                //$("#drawer" + id + " .drawerInfo").replaceWith($.parseJSON(data).drawerInfo);
+                //$("#drawer" + id + " .content").replaceWith($.parseJSON(data).content);
             });
     }
 
@@ -85,7 +98,7 @@ $(document).ready(function() {
                 }
                 $(".drawers").append(data);
                 console.log("adding edit click to missing id: " + missingId);
-                $("#drawer" + missingId + " .editDrawerDataBtn").click(function() {
+                $("#drawer" + missingId + " .editDrawerBtn").click(function() {
                     prepareForShowForm(this);
                 });
                 $("#drawer" + missingId + " .deleteDrawerBtn").click(deleteDrawer);
@@ -96,11 +109,14 @@ $(document).ready(function() {
 
     window.setCloseType = function(type) {
         typeOfColorboxClose = type;
-    }
+    };
 
     $(".deleteDrawerBtn").click(deleteDrawer);
     function deleteDrawer() {
-        var id = this.name.substring(9);
+        var id = this.id.substring(12);
+
+        console.log("delete id: " + id);
+
         if($("#drawer" + id + " .emptyDrawer").length > 0) {
             console.log("the drawer is empty");
             var posting = $.post("deleteDrawerFromFreezer.php", {drawerId: id});
@@ -117,7 +133,7 @@ $(document).ready(function() {
             console.log("the drawer NOT empty");
 
         }
-        console.log(this.name);
+        //console.log(this.name);
     }
 
     $("#deleteDrawerDialog").dialog({
@@ -164,5 +180,23 @@ $(document).ready(function() {
             $( this ).removeClass( "ui-state-hover" );
         }
     );
+
+
+    function adjustMainSectionSize() {
+        console.log("Adjusting height");
+        var footerHeight = $("footer").height();
+        var headerHeight = $("header").height() + $("nav").height();
+        var spacerHeight = 27;
+        var height = $(window).height() - footerHeight - headerHeight - spacerHeight;
+        var mySection = $(".sectionContainerFreezerDetail");
+        if(mySection.height() < height) {
+            mySection.height(height);
+        }
+    }
+
+    $(window).resize(function() {
+        $(".sectionContainerFreezerDetail").height('auto');
+        adjustMainSectionSize();
+    });
 
 });

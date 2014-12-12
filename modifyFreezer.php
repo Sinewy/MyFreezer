@@ -10,7 +10,7 @@ $pageTitle = "Add or Edit Freezer Data";
 $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if(isset($_GET["addOrEditFreezerData"])) {
-	echo("you came from main dashboard.");
+//	echo("you came from main dashboard.");
 
 	if(isset($_GET["freezerID"]) && $_GET["freezerID"] == "noId") {
 		$freezerName = "";
@@ -93,16 +93,20 @@ if(isset($_GET["addOrEditFreezerData"])) {
 <?php include("includes/head.php"); ?>
 	<script src="js/validationFunctions.js"></script>
 	<script src="js/modifyFreezer.js"></script>
-<?php include("includes/headPart2.php"); ?>
+<?php //include("includes/headPart2.php"); ?>
+</head>
+<body>
+
+<section class="modifyFreezer">
 
 	<?php echo formErrors($errors); ?>
 	<?php echo displayMessage(); ?>
 
 	<form action="modifyFreezer.php" method="POST">
 		<fieldset>
-			<legend>Add/Modify Freezer</legend>
+<!--			<legend>Add/Modify Freezer</legend>-->
 
-			<p>Add/Modify Freezer - eneter data</p>
+			<p class="title">Add/Modify Freezer - enter data</p>
 
 			<div>
 				<label for="freezerName">Freezer Name:</label>
@@ -129,25 +133,25 @@ if(isset($_GET["addOrEditFreezerData"])) {
 
 			<div id="submitOrCancel">
 				<input type="hidden" name="submittedSaveData" value="true" />
-				<input id="saveEditFreezerDataForm" type="button" name="save" value="Save" />
-				<input id="cancelAndCloseForm" type="button" name="cancelAndClose" value="Cancel" />
+				<input id="saveEditFreezerDataForm" class="button left pushBtn" type="button" name="save" value="Save" />
+				<input id="cancelAndCloseForm" class="button left" type="button" name="cancelAndClose" value="Cancel" />
 			</div>
 
 		</fieldset>
 	</form>
 
-
-
-			<div>
-				<pre>
-					<?php
-
-						print_r($_POST);
-						print_r($_SESSION);
-
-					?>
-				</pre>
-			</div>
+<!---->
+<!---->
+<!--			<div>-->
+<!--				<pre>-->
+<!--					--><?php
+//
+//						print_r($_POST);
+//						print_r($_SESSION);
+//
+//					?>
+<!--				</pre>-->
+<!--			</div>-->
 
 <!---->
 <!--	<div class="testCssClass">-->
@@ -155,4 +159,16 @@ if(isset($_GET["addOrEditFreezerData"])) {
 <!--		<button>Yes</button>-->
 <!--	</div>-->
 
-<?php include("includes/footer.php"); ?>
+<?php //include("includes/footer.php"); ?>
+
+</section>
+
+</body>
+
+</html>
+
+<?php
+if (isset($dbc)) {
+	mysqli_close($dbc);
+}
+?>
