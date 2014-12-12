@@ -12,7 +12,6 @@ if(isset($_POST["existingDrawers"])) {
 	$displayedDrawers = $_POST["existingDrawers"];
 	$dbDrawers = [];
 	$drawerData = findAllDrawersForFreezer($freezerId);
-	//$drawerData = findAllDrawersForFreezer(7);
 	if(mysqli_num_rows($drawerData) > 0) {
 		while($drawer = mysqli_fetch_assoc($drawerData)) {
 			$dbDrawers[] = $drawer["DrawerID"];
@@ -24,24 +23,6 @@ if(isset($_POST["existingDrawers"])) {
 	foreach($result as $val) {
 		$theOne = $val;
 	}
-
-//
-//	for($i = 0; $i < count($dbDrawers); $i++) {
-//		for($j = 0; $j < count($displayedDrawers); $j++) {
-//			if($dbDrawers[$i] == $displayedDrawers[$j]) {
-//				unset($dbDrawers[$i]);
-//			}
-//		}
-//
-//	}
-////
-//	foreach($dbDrawers as $dbId) {
-//		foreach($displayedDrawers as $diId) {
-//			if($dbId == $diId) {
-//				unset($dbId);
-//			}
-//		}
-//	}
 
 	echo json_encode($theOne);
 } else {

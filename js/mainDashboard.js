@@ -126,7 +126,6 @@ $(document).ready(function() {
                 $("#deleteFreezerDialog").dialog("open");
                 console.log("the drawer NOT empty");
             }
-//            console.log("data from isEmpty: " + data);
         });
         console.log(this.title);
     }
@@ -176,59 +175,7 @@ $(document).ready(function() {
         }
     );
 
-    // add clearfix to freezers and try again
-
-//    var contentHeight = $(".freezers").height() + $("header").height() + $("nav").height();
-
-    console.log("section: " + $(".sectionContainer").height());
-    console.log("freezer box: " + $("div .freezerBox").height());
-    console.log("header: " + $("header").height());
-    console.log("nav: " + $("nav").height());
-    console.log("window: " + $(window).height());
-
-    console.log($(".freezerBox").length);
-    console.log(Math.ceil($(".freezerBox").length/2));
-    console.log(Math.ceil(11/2));
-
-
-//    console.log(contentHeight);
-
-
-//    if(contentHeight >= $(window).height()) {
-//        $(".sectionContainerBackground").height(contentHeight);
-////        $("footer").position();
-//        $("footer").css({top: contentHeight - 20});
-//        console.log("moving it down");
-//    }
-
-//    setAppropriateBgSize();
-//
-//    function setAppropriateBgSize() {
-//        console.log("setting appropriate size");
-//        var contentHeight = Math.ceil($(".freezerBox").length/2) * ($("div .freezerBox").height() + 30) + 220;
-//        console.log("content h: " + contentHeight);
-//        if(contentHeight >= $(window).height()) {
-//            $(".sectionContainerBackground").height(contentHeight);
-////        $("footer").position();
-//            $("footer").css({top: contentHeight - 20});
-//            console.log("moving it down");
-//        } else {
-//            $(".sectionContainerBackground").height($(window).height() - 165);
-//            $(".sectionContainer").height($(window).height() - 165);
-//            $("footer").css({top: 'auto'});
-//            $("footer").css({bottom: '1%'});
-//        }
-//    }
-//
-//    $( window ).resize(function() {
-//        console.log("window resizded");
-//        setAppropriateBgSize();
-//    });
-//    $(".sectionContainerBackground").
-
-
     function adjustMainSectionSize() {
-        console.log("Adjusting height");
         var footerHeight = $("footer").height();
         var headerHeight = $("header").height() + $("nav").height();
         var spacerHeight = 12;

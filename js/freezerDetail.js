@@ -64,8 +64,6 @@ $(document).ready(function() {
                     prepareForShowForm(this);
                 });
                 $("#drawer" + id + " .deleteDrawerBtn").click(deleteDrawer);
-                //$("#drawer" + id + " .drawerInfo").replaceWith($.parseJSON(data).drawerInfo);
-                //$("#drawer" + id + " .content").replaceWith($.parseJSON(data).content);
             });
     }
 

@@ -26,44 +26,16 @@ $userId = $_SESSION["UserID"];
 	<div id="addNewFreezerBtn"><a href="#"><img src="images/addIcon.png">Add New Freezer</a></div>
 </nav>
 
-<!--<section class="sectionContainerBackground"></section>-->
 <section class="sectionContainer clearFix">
     <div class="freezers">
-<!--		<div class="freezerBox">-->
-<!--			<div class="freezerHeader">-->
-<!--				<div class="fTitle">This is my freezer</div>-->
-<!--				<div class="deleteBtn"><img src="images/trash.png"></div>-->
-<!--				<div class="editBtn"><img src="images/edit.png"></div>-->
-<!--			</div>-->
-<!--			<div class="fMainData">-->
-<!--				<div class="fIcon"><img src="images/freezerIcon.png"></div>-->
-<!--				<div class="fMake">Make: Bosch</div>-->
-<!--				<div class="fLocation">Location: Klet najvecja klet</div>-->
-<!--				<div class="fDescription">Description: To je moj description Lorem ipsum bla bla To je moj description Lorem ipsum bla bla To je moj description Lorem ipsum bla  To je moj description Lorem ipsum bla bla</div>-->
-<!--			</div>-->
-<!--		</div>-->
 
 		<?php echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
-<!--        --><?php //echo createMainDashboardView($userId); ?>
+
     </div>
 	<?php echo displayMessage(); ?>
 </section>
 
 <section class="shadowOnly">&nbsp;</section>
-
-<!--<div class="mainField">-->
-<!---->
-<!--	<div class="freezers">-->
-<!--		--><?php //echo createMainDashboardView($userId); ?>
-<!--	</div>-->
-<!--</div>-->
-
 
 <!-- ui-dialog -->
 <div id="deleteFreezerDialog" title="Warning!">
