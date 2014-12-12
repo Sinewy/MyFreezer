@@ -39,8 +39,8 @@ $userId = $_SESSION["UserID"];
 
 <!-- ui-dialog -->
 <div id="deleteFreezerDialog" title="Warning!">
-	<p>Freezer you are trying to delete still contains drawers and content.<br />
-		Are you sure you want to delete this freezer and all of its drawers and content?</p>
+	<p class="popupMsg">Freezer you are trying to delete still contains drawers and content.</p>
+	<p class="popupMsg">Are you sure you want to delete this freezer and all of its drawers and content?</p>
 </div>
 
 <?php include("includes/footer.php"); ?>

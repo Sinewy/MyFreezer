@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59cad9df-3aa6-47bd-8914-fea0e19ade88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/freezerDetail.js" afterPath="$PROJECT_DIR$/js/freezerDetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freezerDetail.php" afterPath="$PROJECT_DIR$/freezerDetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getMissingDrawerForDisplay.php" afterPath="$PROJECT_DIR$/getMissingDrawerForDisplay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainDashboard.js" afterPath="$PROJECT_DIR$/js/mainDashboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainDashboard.php" afterPath="$PROJECT_DIR$/mainDashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mainStyles.css" afterPath="$PROJECT_DIR$/css/mainStyles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -41,11 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainDashboard.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainStyles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9037" max-vertical-offset="10149">
+              <caret line="584" column="9" selection-start-line="584" selection-start-column="1" selection-end-line="584" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="freezerDetail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/freezerDetail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2085354" vertical-offset="142" max-vertical-offset="1173">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainDashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1813773" vertical-offset="0" max-vertical-offset="1031">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="884">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -73,11 +90,11 @@
         <option value="$PROJECT_DIR$/includes/footerLogin.php" />
         <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/getMissingDrawerForDisplay.php" />
+        <option value="$PROJECT_DIR$/js/mainDashboard.js" />
+        <option value="$PROJECT_DIR$/js/freezerDetail.js" />
+        <option value="$PROJECT_DIR$/mainDashboard.php" />
         <option value="$PROJECT_DIR$/css/mainStyles.css" />
         <option value="$PROJECT_DIR$/freezerDetail.php" />
-        <option value="$PROJECT_DIR$/js/mainDashboard.js" />
-        <option value="$PROJECT_DIR$/mainDashboard.php" />
-        <option value="$PROJECT_DIR$/js/freezerDetail.js" />
       </list>
     </option>
   </component>
@@ -132,6 +149,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,7 +652,7 @@
       <updated>1416059017232</updated>
       <workItem from="1416059019938" duration="23154000" />
       <workItem from="1416917709815" duration="657000" />
-      <workItem from="1418072014507" duration="29069000" />
+      <workItem from="1418072014507" duration="29648000" />
     </task>
     <task id="LOCAL-00001" summary="Updated view - not finished yet">
       <created>1416168620527</created>
@@ -635,11 +666,17 @@
       <option name="project" value="LOCAL" />
       <updated>1418393168324</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Just deleted comments...">
+      <created>1418393525555</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1418393525555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52880000" />
+    <option name="totallyTimeSpent" value="53459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
@@ -693,7 +730,8 @@
     </option>
     <MESSAGE value="Updated view - not finished yet" />
     <MESSAGE value="CSS for the page.. &#10;No just Register and forgot password css missing." />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS for the page.. &#10;No just Register and forgot password css missing." />
+    <MESSAGE value="Just deleted comments..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Just deleted comments..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1039,14 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21168582" vertical-offset="0" max-vertical-offset="10013">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getMissingDrawerForDisplay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11542192" vertical-offset="0" max-vertical-offset="1031">
@@ -1079,14 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freezerDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42870998" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mainDashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0586567" vertical-offset="0" max-vertical-offset="3383">
@@ -1105,8 +1127,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1813773" vertical-offset="0" max-vertical-offset="1031">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="884">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mainStyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9037" max-vertical-offset="10149">
+          <caret line="584" column="9" selection-start-line="584" selection-start-column="1" selection-end-line="584" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freezerDetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2085354" vertical-offset="142" max-vertical-offset="1173">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

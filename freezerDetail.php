@@ -56,8 +56,8 @@ if(isset($_GET["fid"])) {
 
 	<!-- ui-dialog -->
 	<div id="deleteDrawerDialog" title="Warning!">
-		<p>Drawer you are trying to delete still contains some content.<br />
-			Are you sure you want to delete this drawer and all of its containing content?</p>
+		<p class="popupMsg">Drawer you are trying to delete still contains some content.</p>
+		<p class="popupMsg">Are you sure you want to delete this drawer and all of its containing content?</p>
 	</div>
 
 
