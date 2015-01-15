@@ -8,7 +8,7 @@
 
 	//$message = "";
 	$registrationFormClass = "registrationForm";
-	$activarionInfoClass = "activationInfoHidden";
+	$activationInfoClass = "activationInfoHidden";
 
 	if(isset($_POST["submitted"])) {
 
@@ -64,7 +64,6 @@
         	$errors["username"] = "This username is already registered. Please use a different username.";//
     	}
     	mysqli_free_result($resultUsername);
-
 		if(empty($errors)) {
 			// Create a unique  activation code:
             $activation = md5(uniqid(rand(), true));
@@ -90,11 +89,11 @@
 		        $_SESSION["message"] .= "Link sent in the mail: ";
 		        $_SESSION["message"] .= "<a href=\"activate.php?email=" . urlencode($email) . "&key={$activation}\">activate here.</a>";
 		        $registrationFormClass = "registrationFormHidden";
-		        $activarionInfoClass = "activationInfo";
+		        $activationInfoClass = "activationInfo";
 			} else { // If it did not run OK.
-		        $_SESSION["message"] = "You could not be registered due to a system error.<br /> We apologize for any inconvenience. <br/ >Please try again.";
+		        $_SESSION["message"] = "You could not be registered due to a system error.<br /> We apologize for any inconvenience. <br/ >Please try again later.";
             	$registrationFormClass = "registrationFormHidden";
-            	$activarionInfoClass = "activationInfo";
+            	$activationInfoClass = "activationInfo";
        		}
        		//mysqli_free_result($resultInsertUser);
 		}
@@ -113,89 +112,105 @@
 ?>
 
 <?php include("includes/head.php"); ?>
-			
-			<?php echo formErrors($errors); ?>
+<!--	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" charset="utf-8" />-->
+<!--	<script src="js/jquery.colorbox.js"></script>-->
+<!--	<script src="js/jquery-ui.js"></script>-->
+<!--	<script src="js/mainDashboard.js"></script>-->
+<?php include("includes/header.php"); ?>
 
-			<form action="registerNewUser.php" method="POST" class="<?php echo $registrationFormClass; ?>">
+
+<!--<section class="registrationFormSection">-->
+
+	<form action="registerNewUser.php" method="POST" class="<?php echo $registrationFormClass; ?>"
+		  xmlns="http://www.w3.org/1999/html">
 			  <fieldset>
-			    <legend>Registration Form</legend>
-
-			    <p>Create A new Account</p>
+			    <legend>Registration Form / Create New Account</legend>
 
 			    <div>
-			    	<label for="email">Email Address:</label>
 			    	<input type="text" id="email" name="email" size="25" value="<?php echo htmlspecialchars($email); ?>" />
+			    	<label for="email">Email Address:</label>
 			    </div>
 			    <div>
-			    	<label for="username">Username :</label>
 			    	<input type="text" id="username" name="username" size="25" value="<?php echo htmlspecialchars($username); ?>" />
+			    	<label for="username">Username:</label>
 			    </div>
 			    <div>
-			    	<label for="password">Password:</label>
 			    	<input type="password" id="password" name="password" size="25" value="" />
+			    	<label for="password">Password:</label>
 			    </div>
 			    <div>
-			    	<label for="firstName">First Name :</label>
 			    	<input type="text" id="firstName" name="firstName" size="25" value="<?php echo htmlspecialchars($firstName); ?>" />
+			    	<label for="firstName">First Name:</label>
 			    </div>
 			    <div>
-			    	<label for="lastName">Last Name :</label>
 			    	<input type="text" id="lastName" name="lastName" size="25" value="<?php echo htmlspecialchars($lastName); ?>" />
+			    	<label for="lastName">Last Name:</label>
 			    </div>
 			    <div>
-			    	<label for="gender">Gender: </label>
 			    	<select id="gender" name="gender">
 			    		<?php echo getRegistrationDropdownOptionsFor("gender", "GenderType", $gender); ?>
 			    	</select>
+			    	<label for="gender">Gender:</label>
 			    </div>
 			    <div>
-			    	<label for="ageGroup">Age Group: </label>
 			    	<select id="ageGroup" name="ageGroup">
 			    		<?php echo getRegistrationDropdownOptionsFor("age", "AgeGroup", $ageGroup); ?>
 			    	</select>
+			    	<label for="ageGroup">Age Group:</label>
 			    </div>
 			    <div>
-			    	<label for="country">Country: </label>
 			    	<select id="country" name="country">
 			    		<?php echo getRegistrationDropdownOptionsFor("country", "Country", $country); ?>
 			    	</select>
+			    	<label for="country">Country:</label>
 			    </div>
-			    <div>
+			    <div class="buttons">
 			       	<input type="hidden" name="submitted" value="TRUE" />
-			    	<input type="submit" value="Register" />
+					<a href="index.php"><div class="button">Cancel / Login page</div></a>
+			    	<input class="button" type="submit" value="Register" />
 			    </div>
 			  </fieldset>
 			</form>
 
-			<div>
-				<pre>
-					<?php
+<?php echo formErrors($errors); ?>
 
-						print_r($_POST);
+	<div class="<?php echo $activationInfoClass; ?>">
+		<?php echo displayMessage(); ?>
+		<a href="index.php"><div class="button">Back to Login page</div></a>
+	</div>
 
-					?>
-				</pre>
-			</div>
-
-			<div class="<?php echo $activarionInfoClass; ?>">
-				<?php echo displayMessage(); ?>
-				<a href="index.php"><button>Go to Login page</button></a>
-			</div>
-			
-			<?php 
-
-				$q = "SELECT * FROM user";
-	        	$result = mysqli_query($dbc, $q);
-	        	if (!$result) {
-					die("Database query failed.");
-				}
-				while($users = mysqli_fetch_assoc($result)) {
-					echo "<div>" . $users["Username"]. "</div>";
-				}
-				mysqli_free_result($result);
+<!--</section>-->
 
 
-				
-			?>
+<!--			<div>-->
+<!--				<pre>-->
+<!--					--><?php
+//
+//						print_r($_POST);
+//
+//					?>
+<!--				</pre>-->
+<!--			</div>-->
 
-<?php include("includes/footer.php"); ?>
+<!--			<div class="--><?php //echo $activarionInfoClass; ?><!--">-->
+<!--				--><?php //echo displayMessage(); ?>
+<!--				<a href="index.php"><button>Go to Login page</button></a>-->
+<!--			</div>-->
+<!--			-->
+<!--			--><?php //
+//
+//				$q = "SELECT * FROM user";
+//	        	$result = mysqli_query($dbc, $q);
+//	        	if (!$result) {
+//					die("Database query failed.");
+//				}
+//				while($users = mysqli_fetch_assoc($result)) {
+//					echo "<div>" . $users["Username"]. "</div>";
+//				}
+//				mysqli_free_result($result);
+//
+//
+//
+//			?>
+
+<?php include("includes/footerLogin.php"); ?>

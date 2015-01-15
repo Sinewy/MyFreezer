@@ -7,7 +7,8 @@
 			$output = "<div class='message'>";
 			$output .= "<p><img src='images/messageIcon.svg'>Warning:</p>";
 			$output .= "<p>";
-			$output .=  htmlentities($_SESSION["message"]);
+//			$output .=  htmlentities($_SESSION["message"]);
+			$output .=  $_SESSION["message"];
 			$output .= "</p>";
 			$output .= "</div>";
 
