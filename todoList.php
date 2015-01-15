@@ -22,3 +22,16 @@
 //TODO - make drawers collapsible - arrow btn to expand or collapse a drawer view
 
 //TODO - colorbox close on overlay ans esc key - make cancel action...
+
+
+//*************************************************\\
+// Priority list
+
+//TODO - 1. search items
+//TODO - 2. sorting by description, amount, date, quantity
+//TODO - 3.a. make all sql safe - SQL refactoring
+//TODO - 3.b. make session expire in an hour of inactivity
+//TODO - 4. reorganize files and cleanup
+//TODO - 5. forgot password functionality - test activation online
+//TODO - 6. make collapsible drawers
+
