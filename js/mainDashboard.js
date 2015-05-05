@@ -36,7 +36,7 @@ $(document).ready(function() {
             closeButton: false,
             innerWidth:'640',
             innerHeight:'460',
-            href:"modifyFreezer.php?freezerID=" + id + "&addOrEditFreezerData=true",
+            href:"includes/ajaxCalls/modifyFreezer.php?freezerID=" + id + "&addOrEditFreezerData=true",
             onClosed:function(){
                 if(typeOfColorboxClose == "submit") {
                     console.log("submitteeedddd");
@@ -108,11 +108,11 @@ $(document).ready(function() {
     function deleteFreezer() {
         var id = this.title.substring(9);
         console.log("delete btn id: " + id);
-        var posting = $.post("isFreezerEmpty.php", {freezerId: id});
+        var posting = $.post("includes/ajaxCalls/isFreezerEmpty.php", {freezerId: id});
         posting.success(function(data) {
             if(data.indexOf("notEmpty") < 0) {
                 console.log("freezer is empty - delete");
-                var postingDelete = $.post("deleteSelectedFreezer.php", {freezerId: id});
+                var postingDelete = $.post("includes/ajaxCalls/deleteSelectedFreezer.php", {freezerId: id});
                 postingDelete.success(function(data) {
                     $("#freezer" + id).remove();
                     if($("[id^='freezer']").length == 0) {
@@ -139,7 +139,7 @@ $(document).ready(function() {
                 click: function() {
                     var fId = $("#deleteFreezerDialog").data("fId");
                     console.log("deleteing drawer with id: " + fId);
-                    var posting = $.post("deleteSelectedFreezer.php", {freezerId: fId});
+                    var posting = $.post("includes/ajaxCalls/deleteSelectedFreezer.php", {freezerId: fId});
                     posting.success(function(data) {
                         $("#freezer" + fId).remove();
                         if($("[id^='freezer']").length == 0) {

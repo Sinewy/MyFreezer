@@ -1,6 +1,6 @@
-<?php require_once("session.php"); ?>
-<?php require_once("dbc.php"); ?>
-<?php require_once("globalFunctions.php"); ?>
+<?php require_once("../session.php"); ?>
+<?php require_once("../dbc.php"); ?>
+<?php require_once("../globalFunctions.php"); ?>
 <?php confirmLoggedIn(); ?>
 
 <?php

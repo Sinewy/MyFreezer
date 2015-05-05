@@ -34,7 +34,7 @@
 
 	<div class="activateAccount">
         <?php echo $message; ?>
-		<a href="index.php"><div class="button">Login page</div></a>
+		<a href="../index.php"><div class="button">Login page</div></a>
 	</div>
 
 <?php include("includes/footerLogin.php"); ?>

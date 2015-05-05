@@ -17,10 +17,10 @@ $(document).ready(function() {
         if(errorCount == 0) {
             console.log("No errors, we can submit.");
 
-            console.log("freezer name: " + $("#freezerName").val());
-            console.log("freezer descri: " + $("#freezerDescription").val());
-            console.log("freezer location: " + $("#freezerLocation").val());
-            console.log("freezer make: " + $("#freezerMake").val());
+            //console.log("freezer name: " + $("#freezerName").val());
+            //console.log("freezer descri: " + $("#freezerDescription").val());
+            //console.log("freezer location: " + $("#freezerLocation").val());
+            //console.log("freezer make: " + $("#freezerMake").val());
 
             var dataObj = new Object();
             dataObj.saveData = "true";

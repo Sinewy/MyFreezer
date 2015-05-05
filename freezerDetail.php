@@ -1,11 +1,11 @@
-<?php require_once("session.php"); ?>
-<?php require_once("dbc.php"); ?>
-<?php require_once("globalFunctions.php"); ?>
-<?php require_once("formValidationFunctions.php"); ?>
+<?php require_once("includes/session.php"); ?>
+<?php require_once("includes/dbc.php"); ?>
+<?php require_once("includes/globalFunctions.php"); ?>
+<?php require_once("includes/formValidationFunctions.php"); ?>
 <?php confirmLoggedIn(); ?>
 
 <?php
-$pageTitle = "Manage Ffeezer drawers and its content";
+$pageTitle = "Manage Freezer drawers and its content";
 $userId = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if(isset($_GET["fid"])) {

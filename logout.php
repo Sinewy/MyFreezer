@@ -4,8 +4,8 @@
 // we can also do it globally in php.ini
 ?>
 
-<?php require_once("session.php"); ?>
-<?php require_once("globalFunctions.php"); ?>
+<?php require_once("includes/session.php"); ?>
+<?php require_once("includes/globalFunctions.php"); ?>
 
 <?php
 	//destroy session

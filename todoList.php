@@ -34,4 +34,5 @@
 //TODO - 4. reorganize files and cleanup
 //TODO - 5. forgot password functionality - test activation online
 //TODO - 6. make collapsible drawers
+//TODO - 7. other languages - gui translation - ENG, SLO, CRO, IT, DE... - click on my name in header - settings
 

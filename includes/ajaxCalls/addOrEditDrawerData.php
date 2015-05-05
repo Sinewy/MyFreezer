@@ -1,7 +1,7 @@
-<?php require_once("session.php"); ?>
-<?php require_once("dbc.php"); ?>
-<?php require_once("globalFunctions.php"); ?>
-<?php require_once("formValidationFunctions.php"); ?>
+<?php require_once("../session.php"); ?>
+<?php require_once("../dbc.php"); ?>
+<?php require_once("../globalFunctions.php"); ?>
+<?php require_once("../formValidationFunctions.php"); ?>
 <?php confirmLoggedIn(); ?>
 
 <?php
@@ -84,8 +84,8 @@ if(isset($_GET["addOrEditData"])) {
 
 
 <?php include("includes/head.php"); ?>
-	<script src="js/validationFunctions.js"></script>
-	<script src="js/addOrEditDrawerData.js"></script>
+	<script src="../../js/validationFunctions.js"></script>
+	<script src="../../js/addOrEditDrawerData.js"></script>
 <?php //include("includes/headPart2.php"); ?>
 
 </head>

@@ -387,7 +387,7 @@ function createMainDashboardView($userId) {
 			$output .= "</div>";
 			$output .= "<a href='freezerDetail.php?fid=" . $freezer["FreezerID"] . "'>";
 			$output .= "<div class='fMainData'>";
-			$output .= "<div class='fIcon'><img src='../images/freezerIcon.png'></div>";
+			$output .= "<div class='fIcon'><img src='images/freezerIcon.png'></div>";
 			$output .= "<div class='fMake'>Make: ". $freezer["Make"] . "</div>";
 			$output .= "<div class='fLocation'>Location: " . $freezer["Location"] . "</div>";
 			$output .= "<div class='fDescription'>Description: " . $freezer["Description"]. "</div>";

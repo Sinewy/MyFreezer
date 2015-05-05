@@ -1,7 +1,7 @@
-<?php require_once("session.php"); ?>
-<?php require_once("dbc.php"); ?>
-<?php require_once("globalFunctions.php"); ?>
-<?php require_once("formValidationFunctions.php"); ?>
+<?php require_once("includes/session.php"); ?>
+<?php require_once("includes/dbc.php"); ?>
+<?php require_once("includes/globalFunctions.php"); ?>
+<?php require_once("includes/formValidationFunctions.php"); ?>
 <?php confirmLoggedIn(); ?>
 
 <?php
